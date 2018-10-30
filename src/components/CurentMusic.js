@@ -1,30 +1,33 @@
 import React from 'react'
-import {musics} from './DB'
 import ReactAudioPlayer from 'react-audio-player'
-
+import {connect} from 'react-redux'
 
 
 class CurentMusic extends React.Component{
 
+
+
   render(){
+    const {curentElement, musics} = this.props
 
-    const {curentMusicId, musics} = this.props
+    console.log(curentElement.title);
+    const musicElement = curentElement
 
-    const musicElement = this.props.musics.map(element => (element.id === curentMusicId) ? element : null )
-    musicElement.sort()
+
+
     return<div className = "curentMusic">
               <ReactAudioPlayer
-                  src={musicElement[0].url_link}
+                  src={musicElement.url_link}
                   // autoPlay
                   controls
-                  // loop
+                  loop
                   // muted
               />
                 <div id="about_current_music">
-                  <img src={musicElement[0].icon === null ? "assets/img/music/default_music_img.png" : musicElement[0].icon}   />
+                  <img src={musicElement.icon === null ? "assets/img/music/default_music_img.png" : musicElement.icon}   />
                     <div>
-                        <p>{musicElement[0].executor}</p>
-                        <p>{musicElement[0].title}</p>
+                        <p>{musicElement.title}</p>
+                        <p>{musicElement.executor}</p>
                     </div>
                 </div>
 
@@ -32,7 +35,10 @@ class CurentMusic extends React.Component{
     }
 }
 
-export default CurentMusic
+export default connect(state => ({
+  musics: state.musics,
+  curentElement: state.curentElement
+}))(CurentMusic)
 
 
 /*    <div>

@@ -22,6 +22,15 @@ export const playlist = [
 		}
 ]
 
+export const defaultId = {
+	"id": "56c782f18990ecf954f6e027",
+	"executor":"Alan Walker",
+	"title":"Darkside (feat. Au/Ra and Tomine Harket)",
+	"icon":"https://pp.userapi.com/c834303/v834303863/18f3d4/zcxfviEegeU.jpg",
+	"url_link":"http://taimp3nhanh.com/stream/stream.php?id=480275022",
+	"full_time": "3:50"
+}
+
 export const musics = [
 		{
 			"id": "56c782f18990ecf954f6e027",

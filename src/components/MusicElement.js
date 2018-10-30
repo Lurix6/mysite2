@@ -1,6 +1,8 @@
 import React from 'react'
 import './style/MusicElement.css'
 import hoverElement from '../decorators/hoverElement'
+import {connect} from 'react-redux'
+import {deleteMusicElement} from '../AC'
 
 class MusicElement extends React.Component {
 	    render(){
@@ -46,17 +48,22 @@ class MusicElement extends React.Component {
 	    }
 
 	    getImageBody = () => {
+				const {element} = this.props
 	    	return <div>
 	  			<img src="assets/img/music/magic.png" alt="" />
-	  			<img src="assets/img/music/del.png" alt=""  />
-	  			<img src="assets/img/music/more.png" alt=""  />
+	  			<img src="assets/img/music/del.png" alt="" onClick={this.hendleDelete} />
+	  			<img src="assets/img/music/more.png" alt="" />
 	    	</div>
 	    }
 
-
+			hendleDelete = () => {
+				const {deleteMusicElement, element} = this.props
+				deleteMusicElement(element.id);
+				console.log("delete11111111111111111");
+			}
 
 
 }
 
 
-export default hoverElement(MusicElement)
+export default connect(null, {deleteMusicElement})(hoverElement(MusicElement))
