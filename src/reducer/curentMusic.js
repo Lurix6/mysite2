@@ -1,7 +1,7 @@
-import {defaultId} from '../components/DB'
+import {musics} from '../components/DB'
 import {CHANGE_CARENT_MUSIC} from '../constants'
 
-export default (state = defaultId, action) => {
+export default (state = musics[5], action) => {
     const {type, payload} = action
 
     switch (type) {

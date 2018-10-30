@@ -5,13 +5,16 @@ import {connect} from 'react-redux'
 
 class CurentMusic extends React.Component{
 
-
+  endedMusic = () => {
+    console.log('ended eeeeeeeeee');
+  }
 
   render(){
     const {curentElement, musics} = this.props
+    // console.log(curentElement, 'element ', musics, ' musics');
 
-    console.log(curentElement.title);
     const musicElement = curentElement
+
 
 
 
@@ -21,6 +24,7 @@ class CurentMusic extends React.Component{
                   // autoPlay
                   controls
                   loop
+                  onEnded
                   // muted
               />
                 <div id="about_current_music">
@@ -59,4 +63,4 @@ export default connect(state => ({
           {musicElement[0].full_time}
     </div>
 
-    */
+*/

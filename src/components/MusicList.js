@@ -3,6 +3,7 @@ import MusicElement from './MusicElement'
 import './style/MusicList.css'
 import {connect} from 'react-redux'
 import {setNewCarentMusic} from '../AC'
+import {filterSearchMusics} from '../selectors'
 
 class MusicList extends Component{
 
@@ -26,5 +27,5 @@ class MusicList extends Component{
 
 
 export default connect(state => ({
-	listElements: state.musics
+	listElements: filterSearchMusics(state)
 }), {setNewCarentMusic})(MusicList)

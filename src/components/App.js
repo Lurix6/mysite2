@@ -5,19 +5,20 @@ import Category from './Category'
 import AboutList from './AboutList'
 import MusicList from './MusicList'
 import PlayList from'./PlayList'
-
-
+import Search from './Search'
+import Recommend from './Recommend'
 
 
 class App extends Component {
 
 	state = {
-		curentCategoryMyMusic : true
+		curentCategory : 'myMysic'
 	}
 
 	updateCurentCategory = (value) => {
+		console.log(this.state.curentCategory);
 		this.setState({
-			curentCategoryMyMusic : value
+			curentCategory : value
 		})
 
 	}
@@ -29,19 +30,12 @@ class App extends Component {
         <div className ="musicBlock">
             <CurentMusic/>
             <div className="fullListMusic">
-              <Category updateCurentCategory={this.updateCurentCategory} defaultCurentCategory ={this.curentCategoryMyMusic} />
+              <Category updateCurentCategory={this.updateCurentCategory} defaultCurentCategory ={this.curentCategory} />
               <hr />
               <div className="showlist">
-                <div className="search">
-                  <input type="text"
-                    id="audio_search"
-                    placeholder="Пошук за музикою" />
-                  <button className="button_search">
-                  </button>
-                </div>
-	               <AboutList categoryMusic={this.state.curentCategoryMyMusic}/>
-	               {this.state.curentCategoryMyMusic ?  <MusicList/> : <PlayList />}
-
+              	<Search />
+	               <AboutList categoryMusic={this.state.curentCategory}/>
+	         				{this.openCategory()}
               </div>
             </div>
 
@@ -51,6 +45,21 @@ class App extends Component {
     );
 
   }
+
+		openCategory = () => {
+			console.log("oppppppeeeeeeeeeeeeennnnnnnnnnnnnnnnn");
+
+			const category = this.state.curentCategory
+			if(category === 'myMysic'){
+				return  <MusicList/>
+			}else if (category === 'playList') {
+				return <PlayList />
+			}else if (category === 'recommend') {
+				return <Recommend/>
+			}
+
+		}
+
 }
 
 export default App;

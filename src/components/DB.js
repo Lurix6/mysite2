@@ -22,6 +22,7 @@ export const playlist = [
 		}
 ]
 
+
 export const defaultId = {
 	"id": "56c782f18990ecf954f6e027",
 	"executor":"Alan Walker",
@@ -83,4 +84,51 @@ export const musics = [
 			"url_link":"http://taimp3nhanh.com/stream/stream.php?id=209231331",
 			"full_time": "3:50"
 		}
+]
+
+export const novelty = [
+	{
+		"id": "56c782f18990ecf954f6e027",
+		"executor":"no name",
+		"title":"я по тебе скучаю",
+		"icon":null,
+		"url_link":"http://taimp3nhanh.com/stream/stream.php?id=480275022",
+		"full_time": "3:50"
+	},{
+		"id": "56c782f17b4e0ba78c7ad717",
+		"executor":"EA7",
+		"title":"твоя любовь это так красиво",
+		"icon": "https://pp.userapi.com/c637323/v637323100/60738/h4x2-v6SRSw.jpg",
+		"url_link":"https://uzimusic.ru/mp3/9150800/Sergejj_Lazarev_-_Tak_Krasivo(uzimusic.ru).mp3",
+		"full_time":"3:50"
+
+	},{
+	 "id": "56c782f1978fdf9a0100df52",
+		"executor":"Manowar",
+		"title":"The Gods Made Heavy Metal",
+		"icon":null,
+		"url_link":"https://uzimusic.ru/mp3/5090528/Manowar_-_The_Gods_Made_Heavy_Metal(uzimusic.ru).mp3",
+		"full_time": "3:50"
+	},{
+		"id": "56c782f1e17f4f9311dfaa2c",
+		"executor":"Powerwolf",
+		"title":"Die, Die, Crucified",
+		"icon":"https://pp.userapi.com/c847018/v847018199/9276b/nnsVy6Qk_Ek.jpg",
+		"url_link":"http://dl1.mp3party.net/download/186731",
+		"full_time": "3:50"
+	},{
+		"id": "56c782f197fe2bad471b3740",
+		"executor":"Smash Into Pieces",
+		"title":"Higher",
+		"icon":"https://pp.userapi.com/c841621/v841621830/1ba8d/Zna-fMYkj1w.jpg",
+		"url_link":"http://dl5.mp3party.net/download/7103519",
+		"full_time": "3:50"
+	},{
+		"id": "56c782f1a2c2c3268ddb3206",
+		"executor":"Kevin Rudolf Ft. Flo-Rida",
+		"title":"You Make The Rain Fall",
+		"icon":"https://pp.userapi.com/c836537/v836537446/467cc/m-Vxsr-ACp8.jpg",
+		"url_link":"http://muzlishko.ru/dl/10353567efe975",
+		"full_time": "3:50"
+	}
 ]

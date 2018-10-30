@@ -40,8 +40,8 @@ class MusicElement extends React.Component {
 	    		position: "absolute",
 					marginLeft: "12px",
 					marginTop: "12px",
-					width: "25px",
-	    		height: "25px",
+					width: "30px",
+	    		height: "30px",
 	    		zIndex: "2"
 	    	}
 	    	return <img src="assets/img/music/play(white).png" style={imgstyle} alt="" />

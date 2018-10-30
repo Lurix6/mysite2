@@ -130,6 +130,7 @@ body, p{
 	height: 100%;
 }
 
+.react-audio-player{}
 
 .curentMusic, .fullListMusic{
 	border-radius: 1px;
@@ -146,45 +147,18 @@ body, p{
 
 }
 
-#about_current_music  {
-	margin-left: 5px;
-	width: 300px;
-}
+
 
 #about_current_music > div {
+	font-size: 15px;
 	margin-left: 5px;
 	display: flex;
 	flex-direction: column;
 }
 
 
-
-#play{
-	margin-left: 5px;
-	width: 30px;
-	height: 30px;
-}
-
-#next_previous img{
-	margin-left: 10px;
-	width: 10px;
-	height: 10px;
-}
-
-#curentTime {
-	margin-right: 15px;
-}
-.about_current_music img{
-	border-radius: 2px;
-	margin: 0 20px ;
-	width: 45px;
-	height: 45px;
-	border-radius: 2px;
-}
-.about_current_music div{
-	display: flex;
-	flex-direction: column;
-
+#about_current_music div p:nth-child(2){
+	color: #a5a5a5;
 }
 
 
@@ -195,7 +169,6 @@ body, p{
 	width: 685px;
 	margin-top: 15px;
 	min-width: 550px;
-	height: 100%;
 	background: white;
 }
 

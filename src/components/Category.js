@@ -3,7 +3,7 @@ import React from 'react'
 export default class Category extends React.Component{
 
 	state = {
-		myMusic: true
+		curentState: 'myMysic'
 	}
 
 	render(){
@@ -13,9 +13,12 @@ export default class Category extends React.Component{
 	};
 
 	return  (<div className="category">
-                <p onClick={() => {this.props.updateCurentCategory(true); this.setState({myMusic:true})} } style={this.state.myMusic ? curentElement : null } >Моя Музика</p>
-                <p onClick={() => {this.props.updateCurentCategory(false); this.setState({myMusic:false})} } style={this.state.myMusic ? null : curentElement }>Плейлисти</p>
-              </div>)
+                <p onClick={() => {this.props.updateCurentCategory('myMysic'); this.setState({curentState:'myMysic'})} } style={this.state.curentState === 'myMysic' ? curentElement : null } >Моя Музика</p>
+                <p onClick={() => {this.props.updateCurentCategory('playList'); this.setState({curentState:'playList'})} } style={this.state.curentState === 'playList' ? curentElement : null  }>Плейлисти</p>
+								<p onClick={() => {this.props.updateCurentCategory('recommend'); this.setState({curentState:'recommend'})} } style={this.state.curentState === 'recommend' ?curentElement : null  }>Рекомендовані</p>
+
+							</div>)
+
 
 	}
 
