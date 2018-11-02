@@ -1,10 +1,11 @@
 
 li{
+	
 	list-style-type: none;
 }
 
 .root{
-	width: 550px;
+
 	height: 48px;
 	padding: 5px;
 	margin: 3px 10px;
@@ -13,7 +14,7 @@ li{
 }
 
 img, .root{
-	border-radius: 3px; 
+	border-radius: 3px;
 
 }
 
@@ -49,6 +50,3 @@ img{
 	width: 15px;
 	height: 15px;
 }
-
-
-

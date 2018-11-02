@@ -86,16 +86,16 @@ export const musics = [
 		}
 ]
 
-export const novelty = [
-	{
-		"id": "56c782f18990ecf954f6e027",
+export const noveltySongs = [
+			{
+		"id": "wd14eut1kt",
 		"executor":"no name",
-		"title":"я по тебе скучаю",
+		"title":"Грустное небо плачет♥",
 		"icon":null,
-		"url_link":"http://taimp3nhanh.com/stream/stream.php?id=480275022",
+		"url_link":"http://muzlishko.ru/dl/2559918aa5e20",
 		"full_time": "3:50"
 	},{
-		"id": "56c782f17b4e0ba78c7ad717",
+		"id": "kwu3kzt2db",
 		"executor":"EA7",
 		"title":"твоя любовь это так красиво",
 		"icon": "https://pp.userapi.com/c637323/v637323100/60738/h4x2-v6SRSw.jpg",
@@ -103,32 +103,32 @@ export const novelty = [
 		"full_time":"3:50"
 
 	},{
-	 "id": "56c782f1978fdf9a0100df52",
+	 "id": "r53ht09e21",
 		"executor":"Manowar",
 		"title":"The Gods Made Heavy Metal",
-		"icon":null,
+		"icon": null,
 		"url_link":"https://uzimusic.ru/mp3/5090528/Manowar_-_The_Gods_Made_Heavy_Metal(uzimusic.ru).mp3",
 		"full_time": "3:50"
 	},{
-		"id": "56c782f1e17f4f9311dfaa2c",
+		"id": "11b3l37izf",
 		"executor":"Powerwolf",
 		"title":"Die, Die, Crucified",
 		"icon":"https://pp.userapi.com/c847018/v847018199/9276b/nnsVy6Qk_Ek.jpg",
 		"url_link":"http://dl1.mp3party.net/download/186731",
 		"full_time": "3:50"
 	},{
-		"id": "56c782f197fe2bad471b3740",
+		"id": "x50g14r080",
 		"executor":"Smash Into Pieces",
 		"title":"Higher",
 		"icon":"https://pp.userapi.com/c841621/v841621830/1ba8d/Zna-fMYkj1w.jpg",
 		"url_link":"http://dl5.mp3party.net/download/7103519",
 		"full_time": "3:50"
 	},{
-		"id": "56c782f1a2c2c3268ddb3206",
+		"id": "wppxu3dx63",
 		"executor":"Kevin Rudolf Ft. Flo-Rida",
 		"title":"You Make The Rain Fall",
 		"icon":"https://pp.userapi.com/c836537/v836537446/467cc/m-Vxsr-ACp8.jpg",
-		"url_link":"http://muzlishko.ru/dl/10353567efe975",
+		"url_link":"http://megapesni.com/get/ep2PdjAfcGudXXExaK_w4A/1541115253/15f359f0/Kevin_Rudolf_feat._Flo_Rida___You_Make_The_Rain_Fall.mp3",
 		"full_time": "3:50"
 	}
 ]

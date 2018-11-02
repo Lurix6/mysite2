@@ -1,13 +1,63 @@
 import React from 'react'
+import './style/Recommend.css'
+import MusicElement from './MusicElement'
+import NewMusicList from './NewMusicList'
+import hoverElement from '../decorators/hoverElement'
 
 class Recommend extends React.Component {
     render(){
 
-      return<div>
-                <h3>Hello im Recommend</h3>
-            </div>
-    }
+      const {hover, hoverOn, hoverOff} = this.props
 
+      const show_all_style = {}
+
+      return	<div className = "recommend_root">
+									<div className="recommend">
+											<div>
+												<div className="specially_for_you">
+													Спеціально для Вас
+												</div>
+												<div className="new_songs">
+													Portugal. The Man, Timo Maas, Inter Delirium та інші
+												</div>
+												<input id="listen_all" type='button' value='Слухати все' />
+											</div>
+                      <div>
+												<img className="new_songs_img" src="assets/img/music/recommend/adv111.png" />
+                      </div>
+									</div>
+                  <div className="black_line">
+                  </div>
+                  <div id="novelty">
+            				<div id="novelty_text">
+            					<p>Новинки</p>
+            					<div
+                        onMouseEnter={hoverOn}
+                        onMouseLeave={hoverOff}
+                        id="show_all">
+            						<p>Показати всі</p>
+            						<img src="assets/img/music/recommend/show_all(right).png" style={hover ? this.decorateShowAll(show_all_style) : show_all_style} alt="" />
+            					</div>
+            				</div>
+            				<div id="novelty_list">
+                      <NewMusicList />
+
+                    </div>
+                  </div>
+                </div>
+
+          }
+
+      decorateShowAll = (btnStyle) => {
+
+        const imgstyle = {
+          transitionDuration: '.8s',
+           // transform: 'scale(1.5)',
+           marginLeft: '10px',
+           transition: '1s'
+        }
+        return imgstyle
+      }
 }
 
-export default Recommend
+export default hoverElement(Recommend)

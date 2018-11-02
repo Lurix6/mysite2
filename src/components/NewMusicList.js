@@ -1,26 +1,24 @@
 import React, {Component} from 'react';
 import MusicElement from './MusicElement'
-import './style/MusicList.css'
 import {connect} from 'react-redux'
 import {setNewCarentMusic} from '../AC'
-import {filterSearchMusics} from '../selectors'
 
-class MusicList extends Component{
+
+class NewMusicList extends Component{
 
 	render(){
+
+
 		const musicElements = this.props.listElements.map(element => <li onClick={() => {const {setNewCarentMusic} = this.props; setNewCarentMusic(element)}} key={element.id}>
 			<MusicElement
 				element = {element}
-				root_width = '550px'
 			/>
 		</li> )
 
 		return(
-			<div id="list_music">
 				<ul>
 					{musicElements}
 				</ul>
-			</div>
 			);
 		}
 	}
@@ -28,5 +26,5 @@ class MusicList extends Component{
 
 
 export default connect(state => ({
-	listElements: filterSearchMusics(state)
-}), {setNewCarentMusic})(MusicList)
+  listElements: state.noveltySongs
+}), {setNewCarentMusic})(NewMusicList)

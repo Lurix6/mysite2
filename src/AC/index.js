@@ -1,6 +1,5 @@
-import {DELETE_MUSIC_ELEMENT} from '../constants'
-import {CHANGE_CARENT_MUSIC} from '../constants'
-import {SEARCH_MUSICS} from '../constants'
+import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS, ADD_NEW_MUSIC_IN_MY_LIST} from '../constants'
+
 
 export function deleteMusicElement(id){
   return {
@@ -20,5 +19,12 @@ export function setSearchDate(search){
   return{
     type:SEARCH_MUSICS,
     payload: { search }
+  }
+}
+
+export function addNewMusic(element){
+  return{
+    type: ADD_NEW_MUSIC_IN_MY_LIST,
+    payload: {element}
   }
 }

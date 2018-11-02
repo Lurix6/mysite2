@@ -2,18 +2,31 @@ import React from 'react'
 import './style/MusicElement.css'
 import hoverElement from '../decorators/hoverElement'
 import {connect} from 'react-redux'
-import {deleteMusicElement} from '../AC'
+import {deleteMusicElement, addNewMusic} from '../AC'
 
 class MusicElement extends React.Component {
+
+			constructor (props) {
+				super(props)
+		        this.state = {
+		            myList : this.props.root_width === undefined
+		          };
+
+
+						}
 	    render(){
-	    	const {element, hover, hoverOn, hoverOff} = this.props;
+	    	const {element, hover, hoverOn, hoverOff, root_width} = this.props;
 	    	const btnStyle = {
 	    			opacity:'1'
 	    		};
+				const setRootSize = {
+						width: root_width
+					};
+
 
 	        return (
 	        	<div
-	    	    	className= "root"
+	    	    	className= "root" style={setRootSize}
 		            onMouseEnter={hoverOn}
 		            onMouseLeave={hoverOff}>
 		        	<div>
@@ -38,8 +51,8 @@ class MusicElement extends React.Component {
 
 	    	const imgstyle = {
 	    		position: "absolute",
-					marginLeft: "12px",
-					marginTop: "12px",
+					marginLeft: "10px",
+					marginTop: "10px",
 					width: "30px",
 	    		height: "30px",
 	    		zIndex: "2"
@@ -50,20 +63,27 @@ class MusicElement extends React.Component {
 	    getImageBody = () => {
 				const {element} = this.props
 	    	return <div>
-	  			<img src="assets/img/music/magic.png" alt="" />
-	  			<img src="assets/img/music/del.png" alt="" onClick={this.hendleDelete} />
-	  			<img src="assets/img/music/more.png" alt="" />
+	  			<img src="assets/img/music/magic1.png" alt="" title="Показати схожі" />
+					{this.state.myList ? 	null : <img src="assets/img/music/del1.png" title="Видалит" alt="" onClick={this.hendleDelete} /> }
+	  			<img src={this.state.myList ? "assets/img/music/plus.png" : "assets/img/music/more1.png"} alt="" onClick={this.state.myList ? this.hendleAddNewMusick : null } title={this.state.myList ? "Додати в свій список" : "Блільше" } />
 	    	</div>
 	    }
 
 			hendleDelete = () => {
 				const {deleteMusicElement, element} = this.props
 				deleteMusicElement(element.id);
-				console.log("delete11111111111111111");
 			}
+
+
+			hendleAddNewMusick = () => {
+				console.log("ADDDDDDD");
+				const {addNewMusic, element} = this.props
+				addNewMusic(element)
+			}
+
 
 
 }
 
 
-export default connect(null, {deleteMusicElement})(hoverElement(MusicElement))
+export default connect(null, {deleteMusicElement, addNewMusic})(hoverElement(MusicElement))
