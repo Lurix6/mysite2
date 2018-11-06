@@ -1,6 +1,6 @@
 import React from 'react'
 
- 
+
 export default class AboutList extends React.Component {
 
 	render(){
@@ -24,6 +24,5 @@ export default class AboutList extends React.Component {
 
 	}
 
-		
-}
 
+}

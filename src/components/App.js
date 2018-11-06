@@ -7,22 +7,9 @@ import MusicList from './MusicList'
 import PlayList from'./PlayList'
 import Search from './Search'
 import Recommend from './Recommend'
-
+import {Route} from 'react-router-dom'
 
 class App extends Component {
-
-	state = {
-		curentCategory : 'myMysic'
-	}
-
-	updateCurentCategory = (value) => {
-		console.log(this.state.curentCategory);
-		this.setState({
-			curentCategory : value
-		})
-
-	}
-
 
   render() {
 
@@ -30,11 +17,10 @@ class App extends Component {
         <div className ="musicBlock">
             <CurentMusic/>
             <div className="fullListMusic">
-              <Category updateCurentCategory={this.updateCurentCategory} defaultCurentCategory ={this.curentCategory} />
+              <Category/>
               <hr />
               <div className="showlist">
               	<Search />
-	               <AboutList categoryMusic={this.state.curentCategory}/>
 	         				{this.openCategory()}
               </div>
             </div>
@@ -48,15 +34,13 @@ class App extends Component {
 
 		openCategory = () => {
 			console.log("oppppppeeeeeeeeeeeeennnnnnnnnnnnnnnnn");
-
-			const category = this.state.curentCategory
-			if(category === 'myMysic'){
-				return  <MusicList/>
-			}else if (category === 'playList') {
-				return <PlayList />
-			}else if (category === 'recommend') {
-				return <Recommend/>
-			}
+			return(
+				<div>
+					<Route path='/music/playList' component={PlayList} />
+					<Route path='/music/recommend' component={Recommend} />
+					<Route path='/music/myMysic' exacte component={MusicList} />
+				</div>
+			)
 
 		}
 

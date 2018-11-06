@@ -23,7 +23,7 @@ class Recommend extends React.Component {
 												<input id="listen_all" type='button' value='Слухати все' />
 											</div>
                       <div>
-												<img className="new_songs_img" src="assets/img/music/recommend/adv111.png" />
+												<img className="new_songs_img" src="/assets/img/music/recommend/adv111.png" />
                       </div>
 									</div>
                   <div className="black_line">
@@ -36,7 +36,7 @@ class Recommend extends React.Component {
                         onMouseLeave={hoverOff}
                         id="show_all">
             						<p>Показати всі</p>
-            						<img src="assets/img/music/recommend/show_all(right).png" style={hover ? this.decorateShowAll(show_all_style) : show_all_style} alt="" />
+            						<img src="/assets/img/music/recommend/show_all(right).png" style={hover ? this.decorateShowAll(show_all_style) : show_all_style} alt="" />
             					</div>
             				</div>
             				<div id="novelty_list">

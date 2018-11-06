@@ -16,7 +16,13 @@ class MusicList extends Component{
 		</li> )
 
 		return(
+
+
 			<div id="list_music">
+			<div className="about_list">
+							<p>Аудіозаписи</p>
+						<p>за замовчуванням</p>
+			</div>
 				<ul>
 					{musicElements}
 				</ul>

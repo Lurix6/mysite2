@@ -1,4 +1,5 @@
 import React from 'react';
+import './style/PlayList.css'
 
 class PlayList extends React.Component{
 
@@ -7,6 +8,7 @@ class PlayList extends React.Component{
 
 		return(
 			<div id="playList">
+				<p>0 список відтворення</p>
 				<h3>Hi im playlist </h3>
 			</div>
 			);

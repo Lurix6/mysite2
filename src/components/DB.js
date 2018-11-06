@@ -92,7 +92,7 @@ export const noveltySongs = [
 		"executor":"no name",
 		"title":"Грустное небо плачет♥",
 		"icon":null,
-		"url_link":"http://muzlishko.ru/dl/2559918aa5e20",
+		"url_link":"http://muzlishko.ru/dl/2559918d21b68",
 		"full_time": "3:50"
 	},{
 		"id": "kwu3kzt2db",
@@ -128,7 +128,7 @@ export const noveltySongs = [
 		"executor":"Kevin Rudolf Ft. Flo-Rida",
 		"title":"You Make The Rain Fall",
 		"icon":"https://pp.userapi.com/c836537/v836537446/467cc/m-Vxsr-ACp8.jpg",
-		"url_link":"http://megapesni.com/get/ep2PdjAfcGudXXExaK_w4A/1541115253/15f359f0/Kevin_Rudolf_feat._Flo_Rida___You_Make_The_Rain_Fall.mp3",
+		"url_link":"http://muzlostyle.ru/dl/253446129d237",
 		"full_time": "3:50"
 	}
 ]

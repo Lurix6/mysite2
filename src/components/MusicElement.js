@@ -31,7 +31,7 @@ class MusicElement extends React.Component {
 		            onMouseLeave={hoverOff}>
 		        	<div>
 		        		{hover ? this.decorateMainImg(btnStyle) : null }
-						<img src={element.icon === null ? "assets/img/music/default_music_img.png" : element.icon} style={btnStyle} alt="" />
+						<img src={element.icon === null ? "/assets/img/music/default_music_img.png" : element.icon} style={btnStyle} alt="" />
 						<div className="list_music_inf">
 							<span>{element.title}</span>
 							<span>{element.executor}</span>
@@ -57,15 +57,15 @@ class MusicElement extends React.Component {
 	    		height: "30px",
 	    		zIndex: "2"
 	    	}
-	    	return <img src="assets/img/music/play(white).png" style={imgstyle} alt="" />
+	    	return <img src="/assets/img/music/play(white).png" style={imgstyle} alt="" />
 	    }
 
 	    getImageBody = () => {
 				const {element} = this.props
 	    	return <div>
-	  			<img src="assets/img/music/magic1.png" alt="" title="Показати схожі" />
-					{this.state.myList ? 	null : <img src="assets/img/music/del1.png" title="Видалит" alt="" onClick={this.hendleDelete} /> }
-	  			<img src={this.state.myList ? "assets/img/music/plus.png" : "assets/img/music/more1.png"} alt="" onClick={this.state.myList ? this.hendleAddNewMusick : null } title={this.state.myList ? "Додати в свій список" : "Блільше" } />
+	  			<img src="/assets/img/music/magic1.png" alt="" title="Показати схожі" />
+					{this.state.myList ? 	null : <img src="/assets/img/music/del1.png" title="Видалит" alt="" onClick={this.hendleDelete} /> }
+	  			<img src={this.state.myList ? "/assets/img/music/plus.png" : "/assets/img/music/more1.png"} alt="" onClick={this.state.myList ? this.hendleAddNewMusick : null } title={this.state.myList ? "Додати в свій список" : "Блільше" } />
 	    	</div>
 	    }
 
@@ -76,9 +76,11 @@ class MusicElement extends React.Component {
 
 
 			hendleAddNewMusick = () => {
-				console.log("ADDDDDDD");
 				const {addNewMusic, element} = this.props
+
+				console.log('add --- ', element);
 				addNewMusic(element)
+
 			}
 
 

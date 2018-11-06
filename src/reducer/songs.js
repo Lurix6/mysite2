@@ -4,10 +4,11 @@ import {DELETE_MUSIC_ELEMENT, ADD_NEW_MUSIC_IN_MY_LIST} from '../constants'
 export default (musicState = musics, action) => {
   const {type, payload} = action
 
+  console.log(payload, 'Reduser');
   switch (type) {
     case DELETE_MUSIC_ELEMENT: return musicState.filter(music => music.id !== payload.id)
 
-    case ADD_NEW_MUSIC_IN_MY_LIST: return {...musicState, payload}
+    case ADD_NEW_MUSIC_IN_MY_LIST:  return {...musicState,payload}
   }
 
   return musicState
