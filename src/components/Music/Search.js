@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { setSearchDate } from '../AC'
+import { setSearchDate } from '../../AC'
 
 class Search extends React.Component{
     render(){

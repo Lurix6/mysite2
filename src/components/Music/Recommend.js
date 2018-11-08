@@ -1,8 +1,8 @@
 import React from 'react'
-import './style/Recommend.css'
+import './../style/Recommend.css'
 import MusicElement from './MusicElement'
 import NewMusicList from './NewMusicList'
-import hoverElement from '../decorators/hoverElement'
+import hoverElement from '../../decorators/hoverElement'
 
 class Recommend extends React.Component {
     render(){

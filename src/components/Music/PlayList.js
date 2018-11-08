@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/PlayList.css'
+import './../style/PlayList.css'
 
 class PlayList extends React.Component{
 

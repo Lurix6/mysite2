@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import MusicElement from './MusicElement'
 import {connect} from 'react-redux'
-import {setNewCarentMusic} from '../AC'
+import {setNewCarentMusic} from '../../AC'
 
 
 class NewMusicList extends Component{

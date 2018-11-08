@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import MusicElement from './MusicElement'
-import './style/MusicList.css'
+import './../style/MusicList.css'
 import {connect} from 'react-redux'
-import {setNewCarentMusic} from '../AC'
-import {filterSearchMusics} from '../selectors'
+import {setNewCarentMusic} from '../../AC'
+import {filterSearchMusics} from '../../selectors'
 
 class MusicList extends Component{
 
@@ -20,7 +20,7 @@ class MusicList extends Component{
 
 			<div id="list_music">
 			<div className="about_list">
-							<p>Аудіозаписи</p>
+						<p>Аудіозаписи</p>
 						<p>за замовчуванням</p>
 			</div>
 				<ul>

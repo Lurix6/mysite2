@@ -1,15 +1,21 @@
 import React from 'react'
-import './style/MusicElement.css'
-import hoverElement from '../decorators/hoverElement'
+import './../style/MusicElement.css'
+import hoverElement from '../../decorators/hoverElement'
 import {connect} from 'react-redux'
-import {deleteMusicElement, addNewMusic} from '../AC'
+import {deleteMusicElement, addNewMusic} from '../../AC'
 
 class MusicElement extends React.Component {
 
 			constructor (props) {
 				super(props)
+					console.log(props.my_music_list , 'My music list');
+					console.log(props.element , 'Element');
+
+					console.log(props.my_music_list.includes(props.element))
 		        this.state = {
-		            myList : this.props.root_width === undefined
+		            myList : props.root_width === undefined,
+								added : props.my_music_list.includes(props.element),
+								update : false
 		          };
 
 
@@ -65,22 +71,30 @@ class MusicElement extends React.Component {
 	    	return <div>
 	  			<img src="/assets/img/music/magic1.png" alt="" title="Показати схожі" />
 					{this.state.myList ? 	null : <img src="/assets/img/music/del1.png" title="Видалит" alt="" onClick={this.hendleDelete} /> }
-	  			<img src={this.state.myList ? "/assets/img/music/plus.png" : "/assets/img/music/more1.png"} alt="" onClick={this.state.myList ? this.hendleAddNewMusick : null } title={this.state.myList ? "Додати в свій список" : "Блільше" } />
+	  			<img src={this.state.myList ? ( this.state.added ? "/assets/img/music/check.png" : "/assets/img/music/plus.png" ) : "/assets/img/music/more1.png"} alt="" onClick={this.state.myList ? (this.state.added ? null : this.hendleAddNewMusick) : null } title={this.state.myList ? "Додати в свій список" : "Блільше" } />
 	    	</div>
 	    }
 
 			hendleDelete = () => {
 				const {deleteMusicElement, element} = this.props
 				deleteMusicElement(element.id);
+				this.setState({
+					update: !this.state.update
+				})
 			}
 
 
+
 			hendleAddNewMusick = () => {
-				const {addNewMusic, element} = this.props
+				const {addNewMusic, element, my_music_list} = this.props
 
 				console.log('add --- ', element);
+
 				addNewMusic(element)
 
+				this.setState({
+					update: !this.state.update
+				})
 			}
 
 
@@ -88,4 +102,6 @@ class MusicElement extends React.Component {
 }
 
 
-export default connect(null, {deleteMusicElement, addNewMusic})(hoverElement(MusicElement))
+export default connect(state => ({
+	my_music_list : state.musics
+}), {deleteMusicElement, addNewMusic})(hoverElement(MusicElement))
