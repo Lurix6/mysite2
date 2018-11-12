@@ -26,8 +26,8 @@ export default class Music extends React.Component{
         </div>
       )
     }
+    
     openCategory = () => {
-      console.log("oppppppeeeeeeeeeeeeennnnnnnnnnnnnnnnn");
       return(
         <div>
           <Route path='/music/playList' component={PlayList} />

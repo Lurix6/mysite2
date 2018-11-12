@@ -1,4 +1,4 @@
-import {SEARCH_MUSICS} from '../constants'
+import {SEARCH_MUSICS} from '../../constants'
 
 export default (state = '', action) => {
     const {type, payload} = action

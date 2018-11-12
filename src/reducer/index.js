@@ -1,11 +1,13 @@
 import {combineReducers} from 'redux'
-import songs from './songs'
-import curentElement from './curentMusic'
-import search from './search'
-import noveltySongs from './exempleNewSongs'
+import songs from './music/songs'
+import curentElement from './music/curentMusic'
+import search from './music/search'
+import noveltySongs from './music/exempleNewSongs'
+import accounts from './friends/friends'
 
 export default combineReducers({
     musics: songs,
     curentElement,
-    search, noveltySongs
+    search, noveltySongs,
+    accounts
 })

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../style/header.css'
+import {Link} from 'react-router-dom'
 
 export default class extends React.Component {
 
@@ -28,7 +29,7 @@ export default class extends React.Component {
 
         <div className="header_section_two">
           <div className="header_item headerButton"><a href="check_in.html"><img src="/assets/img/header/settings-gears.png" alt=""/></a></div>
-          <div className="header_item headerButton"><img src="/assets/img/header/logout.png" alt=""/></div>
+          <div className="header_item headerButton"><Link to='/'><img src="/assets/img/header/logout.png" alt=""/></Link></div>
         </div>
       </div>
 

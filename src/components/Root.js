@@ -1,9 +1,10 @@
 import React from 'react'
 import PropType from 'prop-types'
 import App from './App'
+import LoginOrSingIn from './LoginOrSingIn'
 import store from '../store/index'
 import {Provider} from 'react-redux'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function Root() {
 
@@ -11,7 +12,10 @@ function Root() {
   return(
     <Provider store={store}>
         <Router>
-            <App />
+          <div>
+
+                <Route path='/' component={App} />
+          </div>
         </Router>
     </Provider>
   )

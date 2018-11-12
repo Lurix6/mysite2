@@ -10,7 +10,7 @@ export default class Category extends React.Component{
 	render(){
 
 	return  (<div className="category">
-                <Link to='/music/myMysic'>Моя Музика</Link>
+                <Link to='/music/myList'>Моя Музика</Link>
                 <Link to='/music/playList'>Плейлисти</Link>
 								<Link to='/music/recommend'>Рекомендовані</Link>
 

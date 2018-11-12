@@ -6,7 +6,6 @@ import {connect} from 'react-redux'
 class CurentMusic extends React.Component{
 
   endedMusic = () => {
-    console.log('ended eeeeeeeeee');
   }
 
   render(){

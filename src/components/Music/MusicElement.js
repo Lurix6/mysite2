@@ -8,10 +8,6 @@ class MusicElement extends React.Component {
 
 			constructor (props) {
 				super(props)
-					console.log(props.my_music_list , 'My music list');
-					console.log(props.element , 'Element');
-
-					console.log(props.my_music_list.includes(props.element))
 		        this.state = {
 		            myList : props.root_width === undefined,
 								added : props.my_music_list.includes(props.element),
@@ -21,7 +17,7 @@ class MusicElement extends React.Component {
 
 						}
 	    render(){
-	    	const {element, hover, hoverOn, hoverOff, root_width} = this.props;
+	    	const {element, hover, hoverOn, hoverOff, root_width} = this.props
 	    	const btnStyle = {
 	    			opacity:'1'
 	    		};

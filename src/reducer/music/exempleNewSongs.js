@@ -1,4 +1,4 @@
-import {noveltySongs} from '../components/DB'
+import {noveltySongs} from '../../components/DB'
 
 export default (state = noveltySongs, action) => {
   const {type, payload} = action

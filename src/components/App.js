@@ -3,6 +3,7 @@ import Music from './Music'
 import Menu from './Menu/Menu'
 import Header from './Header'
 import User from './Acount'
+import Friends from './Friends'
 import {Route} from 'react-router-dom'
 
 
@@ -18,7 +19,7 @@ class App extends Component {
             <Menu />
             <Route path='/user' expect component={User} />
             <Route path='/music' component={Music}/>
-
+            <Route path='/friends' component={Friends} />
         </div>
       </div>
     </div>

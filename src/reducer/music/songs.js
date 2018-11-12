@@ -1,5 +1,5 @@
-import {musics} from '../components/DB'
-import {DELETE_MUSIC_ELEMENT, ADD_NEW_MUSIC_IN_MY_LIST} from '../constants'
+import {musics} from '../../components/DB'
+import {DELETE_MUSIC_ELEMENT, ADD_NEW_MUSIC_IN_MY_LIST} from '../../constants'
 
 export default (musicState = musics, action) => {
   const {type, payload} = action
