@@ -4,7 +4,7 @@ import App from './App'
 import LoginOrSingIn from './LoginOrSingIn'
 import store from '../store/index'
 import {Provider} from 'react-redux'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 function Root() {
 
@@ -12,10 +12,12 @@ function Root() {
   return(
     <Provider store={store}>
         <Router>
-          <div>
+          <Switch>
+            <div>
+              <App/>
 
-                <Route path='/' component={App} />
-          </div>
+            </div>
+          </Switch>
         </Router>
     </Provider>
   )

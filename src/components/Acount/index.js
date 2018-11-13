@@ -12,7 +12,7 @@ class App extends Component {
           <div class="main_site_body_container">
             <div class="your_block">
               <div class="avatar">
-                <img src="assets/img/avatarka.jpg" alt="" />
+                <img src="https://i.pinimg.com/originals/a3/13/8d/a3138d75e764cdd799ad3901ef90b8e6.jpg" alt="" />
               </div>
             </div>
             <div class="wall">

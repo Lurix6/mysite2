@@ -9,7 +9,7 @@ export default class extends React.Component {
       <div className="header">
         <div className="header_section">
           <div className="logo">
-            <a href="index.html">LOGO</a>
+            <a href="">LOGO</a>
           </div>
           <div className="header_item headerButton"><img src="/assets/img/header/earth.png" alt=""/></div>
           <div className="header_item headerButton"><img src="/assets/img/header/magnifying-glass-finder.png" alt=""/></div>
@@ -23,12 +23,12 @@ export default class extends React.Component {
         </div>
 
         <div className="header_section_half">
-          <div><a href="upload_rating.html">Update Your rating</a>
+          <div><a href="">Update Your rating</a>
           </div>
         </div>
 
         <div className="header_section_two">
-          <div className="header_item headerButton"><a href="check_in.html"><img src="/assets/img/header/settings-gears.png" alt=""/></a></div>
+          <div className="header_item headerButton"><a href=""><img src="/assets/img/header/settings-gears.png" alt=""/></a></div>
           <div className="header_item headerButton"><Link to='/'><img src="/assets/img/header/logout.png" alt=""/></Link></div>
         </div>
       </div>

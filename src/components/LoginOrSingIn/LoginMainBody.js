@@ -12,7 +12,7 @@ export default class LoginMainBody extends React.Component {
         	<div id='logIn'>
 						<input id='phoneAndEmail' type='text' placeholder='Phone or email' />
 						<input id='password' type='text' placeholder='Password' />
-						<div><Link to='/user'><button id='logInBtn'>Log In</button></Link><p>Forgot your password?</p></div>
+						<div><Link to='/id'><button id='logInBtn'>Log In</button></Link><p>Forgot your password?</p></div>
 				  </div>
           <div id='signUp'>
 							<p>Sign up</p>
