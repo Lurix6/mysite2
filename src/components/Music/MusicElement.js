@@ -33,7 +33,7 @@ class MusicElement extends React.Component {
 		            onMouseLeave={hoverOff}>
 		        	<div>
 		        		{hover ? this.decorateMainImg(btnStyle) : null }
-						<img src={element.icon === null ? "/assets/img/music/default_music_img.png" : element.icon} style={btnStyle} alt="" />
+						<img src={element.icon === null ? "https://www.iconsdb.com/icons/preview/black/note-xxl.png" : element.icon} style={btnStyle} alt="" />
 						<div className="list_music_inf">
 							<span>{element.title}</span>
 							<span>{element.executor}</span>

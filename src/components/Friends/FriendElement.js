@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {changeSelectedFiend} from '../../AC'
 
 
 class FriendElement extends React.Component {
@@ -10,9 +12,9 @@ class FriendElement extends React.Component {
 	        return (
               <div className='friendElement'>
                   <div>
-                    <img className='friendAvatar' src={element.img} />
+                    <img className='friendAvatar' src={element.img} onClick={this.handleChangeFriend} />
                     <div className='friendPeronalData'>
-                      <div className='friendName'>
+                      <div className='friendName' onClick={this.handleChangeFriend} >
                         {element.firstName} {element.lastName}
                       </div>
                       <div className='friendStatus'>
@@ -32,6 +34,13 @@ class FriendElement extends React.Component {
 
 
 	    }
+
+			handleChangeFriend = () => {
+					const {element, changeSelectedFiend} = this.props
+					changeSelectedFiend(element)
+
+			}
+
 
 			getFriendTeg = (tag) => {
 				let classTag = ''
@@ -59,4 +68,4 @@ class FriendElement extends React.Component {
 }
 
 
-export default FriendElement
+export default connect(null, {changeSelectedFiend})(FriendElement)

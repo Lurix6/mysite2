@@ -9,13 +9,13 @@ export let Account = [
 	rating: 10,
 	tag:['familyTag', 'bestFriendTag'],
 	background:'../img/account/0000/img',
-	personalDate : [{
+	personalDate : {
 		country:'Україна',
 		city:'Ужгород',
 		language:'Українська',
 		birthday:'19 жовтня 1997',
 		age: 21
-	}],
+	},
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
 },{
 	id:'0001',
@@ -26,13 +26,13 @@ export let Account = [
 	img:'https://pp.userapi.com/c409317/v409317816/5046/aTFkbRVrS44.jpg',
 	rating: 9.8,
 	background:'../img/account/0000/img',
-	personalDate : [{
+	personalDate : {
 		country:'Україна',
 		city:'Ужгород',
 		language:'Українська',
 		birthday:'9 вересня 1994',
 		age: 24
-	}],
+	},
 	musicList: ['d700e2f880e148ada756061309017d33','d6121560c687494896e74ab39522a871','eb328530519540e4b5f15827d0c11afe','c4fa87628b364114847f8b7f6cf0194c']
 },{
 	id:'0002',
@@ -43,13 +43,13 @@ export let Account = [
 	img:'https://pp.userapi.com/c622118/v622118545/1f179/rX8h-Sta7eI.jpg',
 	rating: 10,
 	background:'../img/account/0000/img',
-	personalDate : [{
+	personalDate : {
 		country:'Україна',
 		city:'Львів',
 		language:'Українська',
 		birthday:'15 квітня 1991',
 		age: 27
-	}],
+	},
 	musicList: ['56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206','wd14eut1kt','r53ht09e21','x50g14r080']
 },{
 	id:'0003',
@@ -60,13 +60,13 @@ export let Account = [
 	img:'https://sun9-1.userapi.com/hmI5H6-4PZ0SZMm7HhoNozmHjiVokZy7oI_xGQ/Xn57_iLc07U.jpg',
 	rating: 10,
 	background:'../img/account/0000/img',
-	personalDate : [{
+	personalDate : {
 		country:'Україна',
 		city:'Київ',
 		language:'Українська',
 		birthday:'3 червня 2001',
 		age: 17
-	}],
+	},
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f197fe2bad471b3740','d700e2f880e148ada756061309017d33','723767e78d4a40f5b254eda77eae0ac6','d6121560c687494896e74ab39522a871','c4fa87628b364114847f8b7f6cf0194c','203318a9d82f4bd1816472d961e2d24d']
 },{
 	id:'0004',
@@ -77,13 +77,13 @@ export let Account = [
 	img:'https://avatars.mds.yandex.net/get-pdb/921063/e3777ed8-32e4-4478-8d6e-d2d45bb8c751/orig',
 	rating: 8.8,
 	background:'../img/account/0000/img',
-	personalDate : [{
+	personalDate : {
 		country:'Україна',
 		city:'Одеса',
 		language:'Українська',
 		birthday:'21 квітня 1996',
 		age: 22
-	}],
+	},
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
 },{
 	id:'0005',
@@ -95,13 +95,13 @@ export let Account = [
 	img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUJuXVSf14c7Q5rpkk0vAwlLYL2Qg6gduka-NDtoPei08EftszeA',
 	rating: 7.8,
 	background:'https://pp.userapi.com/c619629/v619629382/2ab7/mNU4AyZvXMo.jpg',
-	personalDate : [{
+	personalDate : {
 		country:'Чехія',
 		city:'Прага',
 		language:'Українська, Чеська',
 		birthday:'25 березня 1998',
 		age: 20
-	}],
+	},
 	musicList: ['56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206','wd14eut1kt','r53ht09e21','x50g14r080']
 },{
 	id:'0006',
@@ -113,13 +113,13 @@ export let Account = [
 	rating: 10,
 	background:'../img/account/0000/img',
 	tag:['familyTag'],
-	personalDate : [{
+	personalDate : {
 		country:'Україна',
 		city:'Косівська-Поляна',
 		language:'Українська',
 		birthday:'12 червень 2006',
 		age: 13
-	}],
+	},
 	musicList: ['56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782fghgfc2c3268ddb3206','kwu3kzt2db']
 },{
 	id:'0007',
@@ -130,26 +130,37 @@ export let Account = [
 	img:'https://i.pinimg.com/474x/80/ee/77/80ee7793d33dd92605eab2fecb522f2f.jpg',
 	rating: 9.5,
 	background:'../img/account/0000/img',
-	personalDate : [{
+	personalDate : {
 		country:'Україна',
 		city:'Льів',
 		language:'Українська',
 		birthday:'9 листопад 2001',
 		age: 17
-	}],
+	},
 	musicList: ['56c782f197fe2bad471b3740','wd14eut1kt','kwu3kzt2db','d6121560c687494896e74ab39522a871','6b554e1b97e2487ca692622ba588f5f7']
 },
 ]
 
-export const playlist = [
-		{
-			"displayText":"Darkside (feat. Au/Ra and Tomine Harket)",
-			"url":"https://storage.mp3cc.biz/download/36135444/RnZhUys0RHMzSlVYcCt1cGtZSTlDaUpWbmo4aVZNSHp2bWQ5QkZoejJXcFhtM1hzbkNhUHNVcUtJYlZDekhEMXU2Yyt5dDlWYVlDNEljZURaUXVrL01QQ0UwTTVtQU5PWUZud1FnZi9SYlNjbEc3THlGZGtBcDJ4dXc3alh3Yno/amaranthe-hunger-remix_(mp3CC.biz).mp3"
-		},{
-			"displayText":"Warrior Inside",
-			"url":"https://storage.mp3cc.biz/download/36135444/RnZhUys0RHMzSlVYcCt1cGtZSTlDaUpWbmo4aVZNSHp2bWQ5QkZoejJXcFhtM1hzbkNhUHNVcUtJYlZDekhEMXU2Yyt5dDlWYVlDNEljZURaUXVrL01QQ0UwTTVtQU5PWUZud1FnZi9SYlNjbEc3THlGZGtBcDJ4dXc3alh3Yno/amaranthe-hunger-remix_(mp3CC.biz).mp3"
-		}
-]
+export const selectedFriend = {
+	id:'0006',
+	status: 'Слабость всегда спасалась верой в чудеса',
+	firstName:'Julia',
+	lastName:'Popovych',
+	online: false,
+	img:'https://bipbap.ru/wp-content/uploads/2017/04/3HZmEfZdLwg.jpg',
+	rating: 10,
+	background:'../img/account/0000/img',
+	tag:['familyTag'],
+	personalDate : {
+		country:'Україна',
+		city:'Косівська-Поляна',
+		language:'Українська',
+		birthday:'12 червень 2006',
+		age: 13
+	},
+	musicList: ['56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782fghgfc2c3268ddb3206','kwu3kzt2db']
+}
+
 
 
 export const musics = [
@@ -305,110 +316,109 @@ export const fullMusics = [
 			"url_link":"http://taimp3nhanh.com/stream/stream.php?id=209231331",
 			"full_time": "3:50"
 		},{
-		"id": "wd14eut1kt",
-		"executor":"no name",
-		"title":"Грустное небо плачет♥",
-		"icon":null,
-		"url_link":"http://muzlishko.ru/dl/2559918d21b68",
-		"full_time": "3:50"
+			"id": "wd14eut1kt",
+			"executor":"no name",
+			"title":"Грустное небо плачет♥",
+			"icon":null,
+			"url_link":"http://muzlishko.ru/dl/2559918d21b68",
+			"full_time": "3:50"
 		},{
-		"id": "kwu3kzt2db",
-		"executor":"EA7",
-		"title":"твоя любовь это так красиво",
-		"icon": "https://pp.userapi.com/c637323/v637323100/60738/h4x2-v6SRSw.jpg",
-		"url_link":"https://uzimusic.ru/mp3/9150800/Sergejj_Lazarev_-_Tak_Krasivo(uzimusic.ru).mp3",
-		"full_time":"3:50"
-
+			"id": "kwu3kzt2db",
+			"executor":"EA7",
+			"title":"твоя любовь это так красиво",
+			"icon": "https://pp.userapi.com/c637323/v637323100/60738/h4x2-v6SRSw.jpg",
+			"url_link":"https://uzimusic.ru/mp3/9150800/Sergejj_Lazarev_-_Tak_Krasivo(uzimusic.ru).mp3",
+			"full_time":"3:50"
 		},{
-	 "id": "r53ht09e21",
-		"executor":"Manowar",
-		"title":"The Gods Made Heavy Metal",
-		"icon": null,
-		"url_link":"https://uzimusic.ru/mp3/5090528/Manowar_-_The_Gods_Made_Heavy_Metal(uzimusic.ru).mp3",
-		"full_time": "3:50"
+		 "id": "r53ht09e21",
+			"executor":"Manowar",
+			"title":"The Gods Made Heavy Metal",
+			"icon": null,
+			"url_link":"https://uzimusic.ru/mp3/5090528/Manowar_-_The_Gods_Made_Heavy_Metal(uzimusic.ru).mp3",
+			"full_time": "3:50"
 		},{
-		"id": "11b3l37izf",
-		"executor":"Powerwolf",
-		"title":"Die, Die, Crucified",
-		"icon":"https://pp.userapi.com/c847018/v847018199/9276b/nnsVy6Qk_Ek.jpg",
-		"url_link":"http://dl1.mp3party.net/download/186731",
-		"full_time": "3:50"
+			"id": "11b3l37izf",
+			"executor":"Powerwolf",
+			"title":"Die, Die, Crucified",
+			"icon":"https://pp.userapi.com/c847018/v847018199/9276b/nnsVy6Qk_Ek.jpg",
+			"url_link":"http://dl1.mp3party.net/download/186731",
+			"full_time": "3:50"
 		},{
-		"id": "x50g14r080",
-		"executor":"Smash Into Pieces",
-		"title":"Higher",
-		"icon":"https://pp.userapi.com/c841621/v841621830/1ba8d/Zna-fMYkj1w.jpg",
-		"url_link":"http://dl5.mp3party.net/download/7103519",
-		"full_time": "3:50"
+			"id": "x50g14r080",
+			"executor":"Smash Into Pieces",
+			"title":"Higher",
+			"icon":"https://pp.userapi.com/c841621/v841621830/1ba8d/Zna-fMYkj1w.jpg",
+			"url_link":"http://dl5.mp3party.net/download/7103519",
+			"full_time": "3:50"
 		},{
-		"id": "wppxu3dx63",
-		"executor":"Kevin Rudolf Ft. Flo-Rida",
-		"title":"You Make The Rain Fall",
-		"icon":"https://pp.userapi.com/c836537/v836537446/467cc/m-Vxsr-ACp8.jpg",
-		"url_link":"http://muzlostyle.ru/dl/253446129d237",
-		"full_time": "3:50"
+			"id": "wppxu3dx63",
+			"executor":"Kevin Rudolf Ft. Flo-Rida",
+			"title":"You Make The Rain Fall",
+			"icon":"https://pp.userapi.com/c836537/v836537446/467cc/m-Vxsr-ACp8.jpg",
+			"url_link":"http://muzlostyle.ru/dl/253446129d237",
+			"full_time": "3:50"
 		},{
-		"id": "0c897c0de6ed4a65a43f3f6e62f8bb6c",
-		"executor":"Our Waking Hour",
-		"title":"Break Me Down",
-		"icon": null,
-		"url_link":"https://2.cdn.mp3xa.pw/proxy/cs1-51v4.vkuseraudio.net/p8/463f2959d86dae.mp3?title=Our%20Waking%20Hour%20-%20Break%20Me%20Down",
-		"full_time": "4:02"
+			"id": "0c897c0de6ed4a65a43f3f6e62f8bb6c",
+			"executor":"Our Waking Hour",
+			"title":"Break Me Down",
+			"icon": null,
+			"url_link":"https://2.cdn.mp3xa.pw/proxy/cs1-51v4.vkuseraudio.net/p8/463f2959d86dae.mp3?title=Our%20Waking%20Hour%20-%20Break%20Me%20Down",
+			"full_time": "4:02"
 		},{
-		"id": "d700e2f880e148ada756061309017d33",
-		"executor":"Dead by April",
-		"title":"Last Goodbye",
-		"icon": null,
-		"url_link":"https://cdn.mp3xa.pw/proxy/cs1-73v4.vkuseraudio.net/p9/6be1e983f66c8c.mp3",
-		"full_time": "4:02"
+			"id": "d700e2f880e148ada756061309017d33",
+			"executor":"Dead by April",
+			"title":"Last Goodbye",
+			"icon": null,
+			"url_link":"https://cdn.mp3xa.pw/proxy/cs1-73v4.vkuseraudio.net/p9/6be1e983f66c8c.mp3",
+			"full_time": "4:02"
 		},{
-		"id": "723767e78d4a40f5b254eda77eae0ac6",
-		"executor":"Melanie Martinez",
-		"title":"Mad Hatter",
-		"icon": "https://pp.userapi.com/c636816/v636816452/67388/NWgARPDpkI0.jpg",
-		"url_link":"https://storage.mp3cc.biz/download/23585691/NG9hRWtNVHBsR3ZqVmwvdmg4QnNzMVVuQ1RnWHIwZ1BZTmpVTHNOV3FCcG1RZlV3dG94cUxnZDhyK0VjMndEdlI2WWpUUUJQZlFOazRkT0FRSlo5L3ZKWXVQaFNabmtZME9ISmtCeFdFK3IzNGJxVFFHQVl5UXdrN0dNTUZMbUE/melanie-martinez-mad-hatter_(mp3CC.biz).mp3",
-		"full_time": "4:02"
+			"id": "723767e78d4a40f5b254eda77eae0ac6",
+			"executor":"Melanie Martinez",
+			"title":"Mad Hatter",
+			"icon": "https://pp.userapi.com/c636816/v636816452/67388/NWgARPDpkI0.jpg",
+			"url_link":"https://storage.mp3cc.biz/download/23585691/NG9hRWtNVHBsR3ZqVmwvdmg4QnNzMVVuQ1RnWHIwZ1BZTmpVTHNOV3FCcG1RZlV3dG94cUxnZDhyK0VjMndEdlI2WWpUUUJQZlFOazRkT0FRSlo5L3ZKWXVQaFNabmtZME9ISmtCeFdFK3IzNGJxVFFHQVl5UXdrN0dNTUZMbUE/melanie-martinez-mad-hatter_(mp3CC.biz).mp3",
+			"full_time": "4:02"
 		},{
-		"id": "d6121560c687494896e74ab39522a871",
-		"executor":"Krewella",
-		"title":"Say Goodbye",
-		"icon": "https://pp.userapi.com/c845219/v845219583/9b328/aYFC7AoYp1U.jpg",
-		"url_link":"http://drivemusic.me/dl/rmfSoCG_d6MvoMQuQBh2Cg/1541976867/download_music/2014/11/krewella-say-goodbye.mp3",
-		"full_time": "4:02"
+			"id": "d6121560c687494896e74ab39522a871",
+			"executor":"Krewella",
+			"title":"Say Goodbye",
+			"icon": "https://pp.userapi.com/c845219/v845219583/9b328/aYFC7AoYp1U.jpg",
+			"url_link":"http://drivemusic.me/dl/rmfSoCG_d6MvoMQuQBh2Cg/1541976867/download_music/2014/11/krewella-say-goodbye.mp3",
+			"full_time": "4:02"
 		},{
-		"id": "31397a76f41345d4a221fde6a775e218",
-		"executor":"Five Finger Death Punch",
-		"title":"The Pride",
-		"icon": "https://pp.userapi.com/c824601/v824601509/fc96e/1hEhvdfXO9I.jpg",
-		"url_link":"https://4.cdn.mp3xa.pw/proxy/cs1-49v4.vkuseraudio.net/p10/6ec63bf14c3392.mp3",
-		"full_time": "4:02"
+			"id": "31397a76f41345d4a221fde6a775e218",
+			"executor":"Five Finger Death Punch",
+			"title":"The Pride",
+			"icon": "https://pp.userapi.com/c824601/v824601509/fc96e/1hEhvdfXO9I.jpg",
+			"url_link":"https://4.cdn.mp3xa.pw/proxy/cs1-49v4.vkuseraudio.net/p10/6ec63bf14c3392.mp3",
+			"full_time": "4:02"
 		},{
-		"id": "eb328530519540e4b5f15827d0c11afe",
-		"executor":"BassBoosted By slava",
-		"title":"Ты не токой",
-		"icon": "https://pp.userapi.com/c639529/v639529884/3e247/aOsYk3nV-M8.jpg",
-		"url_link":"http://drivemusic.me/dl/cVgrjftc4eLkKEEN1eeKlQ/1541977090/download_music/2015/05/julianna-karaulova-ty-ne-takojj.mp3",
-		"full_time": "4:02"
+			"id": "eb328530519540e4b5f15827d0c11afe",
+			"executor":"BassBoosted By slava",
+			"title":"Ты не токой",
+			"icon": "https://pp.userapi.com/c639529/v639529884/3e247/aOsYk3nV-M8.jpg",
+			"url_link":"http://drivemusic.me/dl/cVgrjftc4eLkKEEN1eeKlQ/1541977090/download_music/2015/05/julianna-karaulova-ty-ne-takojj.mp3",
+			"full_time": "4:02"
 		},{
-		"id": "c4fa87628b364114847f8b7f6cf0194c",
-		"executor":"Oomph!",
-		"title":"Labyrinth",
-		"icon": "https://pp.userapi.com/c637525/v637525450/50f37/6wAnNpAwGFI.jpg",
-		"url_link":"https://2.cdn.mp3xa.pw/proxy/cs1-68v4.vkuseraudio.net/p8/ae48a4d3e32bec.mp3",
-		"full_time": "4:02"
+			"id": "c4fa87628b364114847f8b7f6cf0194c",
+			"executor":"Oomph!",
+			"title":"Labyrinth",
+			"icon": "https://pp.userapi.com/c637525/v637525450/50f37/6wAnNpAwGFI.jpg",
+			"url_link":"https://2.cdn.mp3xa.pw/proxy/cs1-68v4.vkuseraudio.net/p8/ae48a4d3e32bec.mp3",
+			"full_time": "4:02"
 		},{
-		"id": "203318a9d82f4bd1816472d961e2d24d",
-		"executor":"OOMPH!",
-		"title":"Augen auf!",
-		"icon": "https://pp.userapi.com/c639118/v639118448/30480/BhNS4JDEaQI.jpg",
-		"url_link":"https://2.cdn.mp3xa.pw/proxy/cs1-63v4.vkuseraudio.net/p12/44264996b8d77b.mp3",
-		"full_time": "4:02"
+			"id": "203318a9d82f4bd1816472d961e2d24d",
+			"executor":"OOMPH!",
+			"title":"Augen auf!",
+			"icon": "https://pp.userapi.com/c639118/v639118448/30480/BhNS4JDEaQI.jpg",
+			"url_link":"https://2.cdn.mp3xa.pw/proxy/cs1-63v4.vkuseraudio.net/p12/44264996b8d77b.mp3",
+			"full_time": "4:02"
 		},{
-		"id": "6b554e1b97e2487ca692622ba588f5f7",
-		"executor":"Savage, Timmy Trumpet",
-		"title":"Freaks",
-		"icon": "https://pp.userapi.com/c841322/v841322667/28222/IJfI4ZmgOp8.jpg",
-		"url_link":"http://drivemusic.me/dl/e82ob7xkexDmVBiu3sEO4w/1541977509/download_music/2014/09/timmy-trumpet-savage-freaks-radio-edit.mp3",
-		"full_time": "4:02"
+			"id": "6b554e1b97e2487ca692622ba588f5f7",
+			"executor":"Savage, Timmy Trumpet",
+			"title":"Freaks",
+			"icon": "https://pp.userapi.com/c841322/v841322667/28222/IJfI4ZmgOp8.jpg",
+			"url_link":"http://drivemusic.me/dl/e82ob7xkexDmVBiu3sEO4w/1541977509/download_music/2014/09/timmy-trumpet-savage-freaks-radio-edit.mp3",
+			"full_time": "4:02"
 		}
 ]

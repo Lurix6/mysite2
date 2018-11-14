@@ -5,19 +5,23 @@ import {Link} from 'react-router-dom'
 export default class extends React.Component {
 
   render(){
+
+    const style = {background: 'linear-gradient(to top,#7f7f7f,#5b5b5b)'}
+
+
       return (
-      <div className="header">
+      <div className="header" style={style}>
         <div className="header_section">
           <div className="logo">
             <a href="">LOGO</a>
           </div>
-          <div className="header_item headerButton"><img src="/assets/img/header/earth.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="/assets/img/header/magnifying-glass-finder.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="/assets/img/header/friends.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="/assets/img/header/console.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="/assets/img/header/star.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="/assets/img/header/youtube-play-button.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="/assets/img/header/headphones.png" alt=""/>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/globe-7-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/search-13-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/group-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/joystick-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/star-5-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/start-xl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/headphones-3-xxl.png" alt=""/>
         </div>
 
         </div>
@@ -28,8 +32,8 @@ export default class extends React.Component {
         </div>
 
         <div className="header_section_two">
-          <div className="header_item headerButton"><a href=""><img src="/assets/img/header/settings-gears.png" alt=""/></a></div>
-          <div className="header_item headerButton"><Link to='/'><img src="/assets/img/header/logout.png" alt=""/></Link></div>
+          <div className="header_item headerButton"><a href=""><img src="https://www.iconsdb.com/icons/preview/white/settings-5-xxl.png" alt=""/></a></div>
+          <div className="header_item headerButton"><Link to='/'><img src="https://www.iconsdb.com/icons/preview/white/logout-xxl.png" alt=""/></Link></div>
         </div>
       </div>
 

@@ -27,7 +27,7 @@ class CurentMusic extends React.Component{
                   // muted
               />
                 <div id="about_current_music">
-                  <img src={musicElement.icon === null ? "assets/img/music/default_music_img.png" : musicElement.icon}   />
+                  <img src={musicElement.icon === null ? "https://www.iconsdb.com/icons/preview/black/note-xxl.png" : musicElement.icon}   />
                     <div>
                         <p>{musicElement.title}</p>
                         <p>{musicElement.executor}</p>
