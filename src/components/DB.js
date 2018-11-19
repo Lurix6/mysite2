@@ -1,6 +1,8 @@
-export let Account = [
+export let Profils = [
 {
 	id:'0000',
+	email:'vasya_popovych23@gmai.com',
+	password:'123456789',
 	status: 'На судьбу , дураков и женщин не обижаются =)',
 	firstName:'Vasya',
 	lastName:'Popovych',
@@ -19,6 +21,8 @@ export let Account = [
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
 },{
 	id:'0001',
+	email:'pashaIgnat@gmail.com',
+	password:'pashaaaaaa',
 	status: 'Как больно быть другом с тем, кого любишь…',
 	firstName:'Pasha',
 	lastName:'Ihatuk',
@@ -36,6 +40,8 @@ export let Account = [
 	musicList: ['d700e2f880e148ada756061309017d33','d6121560c687494896e74ab39522a871','eb328530519540e4b5f15827d0c11afe','c4fa87628b364114847f8b7f6cf0194c']
 },{
 	id:'0002',
+	email:'basarabonn@gmailcom',
+	password:'basarabbbb666',
 	status: 'Не доверяйте своему сердцу – оно стучит!',
 	firstName:'Vasya',
 	lastName:'Basaraba',
@@ -53,6 +59,8 @@ export let Account = [
 	musicList: ['56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206','wd14eut1kt','r53ht09e21','x50g14r080']
 },{
 	id:'0003',
+	email:'basarrabIndriy',
+	password:'andiy_basarab@gmai.com',
 	status: 'Нужна? добейся. Не сдавайся.',
 	firstName:'Andriy',
 	lastName:'Basaraba',
@@ -70,6 +78,8 @@ export let Account = [
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f197fe2bad471b3740','d700e2f880e148ada756061309017d33','723767e78d4a40f5b254eda77eae0ac6','d6121560c687494896e74ab39522a871','c4fa87628b364114847f8b7f6cf0194c','203318a9d82f4bd1816472d961e2d24d']
 },{
 	id:'0004',
+	email:'rusnakIvann@gmail.com',
+	password:'rusnakvanja69',
 	status: 'А ты, козёл, мог стать и Козерогом!',
 	firstName:'Vanja',
 	lastName:'Rusnak',
@@ -87,6 +97,8 @@ export let Account = [
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
 },{
 	id:'0005',
+	email:'mr_bobruk@gmail.com',
+	password:'123456789',
 	status: 'Бардак. На столе. В голове. И в жизни.',
 	firstName:'Viktor',
 	lastName:'Bobrkjuk',
@@ -105,6 +117,8 @@ export let Account = [
 	musicList: ['56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206','wd14eut1kt','r53ht09e21','x50g14r080']
 },{
 	id:'0006',
+	email:'juliapopovych@gmailcom',
+	password:'julia6666',
 	status: 'Слабость всегда спасалась верой в чудеса',
 	firstName:'Julia',
 	lastName:'Popovych',
@@ -123,6 +137,8 @@ export let Account = [
 	musicList: ['56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782fghgfc2c3268ddb3206','kwu3kzt2db']
 },{
 	id:'0007',
+	email:'ivanochkaBOB@gmail.com',
+	password:'ivanka1111',
 	status: 'У меня один недостаток — я не умею общаться с мудаками',
 	firstName:'Ivanka',
 	lastName:'Bobeschuk',
@@ -143,6 +159,8 @@ export let Account = [
 
 export const selectedFriend = {
 	id:'0006',
+	email:'',
+	password:'',
 	status: 'Слабость всегда спасалась верой в чудеса',
 	firstName:'Julia',
 	lastName:'Popovych',
@@ -264,12 +282,7 @@ export const noveltySongs = [
 	}
 ]
 
-export const filterForFriends ={
-		name:null,
-		active: true,
-		city:null
 
-}
 
 export const fullMusics = [
 		{

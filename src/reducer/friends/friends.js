@@ -1,6 +1,6 @@
-import {Account} from '../../components/DB'
+import {Profils} from '../../components/DB'
 
-export default (accountState = Account, action) => {
+export default (accountState = Profils, action) => {
   const {type, payload} = action
   switch (type) {
     case 'hello': return accountState

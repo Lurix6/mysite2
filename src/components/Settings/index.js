@@ -16,11 +16,11 @@ class App extends Component {
         </div>
         <div id='miniMenu'>
           <ul>
-            <Link to={{pathname:"/settings", search:"?category=general"}}><li>Загальне</li></Link>
-            <Link to={{pathname:"/settings", search:"?category=secutity"}}><li>Безпека</li></Link>
-            <Link to={{pathname:"/settings", search:"?category=privacy"}}><li>Приватність</li></Link>
-            <Link to={{pathname:"/settings", search:"?category=notification"}}><li>Сповіщення</li></Link>
-            <Link to={{pathname:"/settings", search:"?category=blacklist"}}><li>Чоний список</li></Link>
+            <Link to={{pathname:"/profil/settings", search:"?category=general"}}><li>Загальне</li></Link>
+            <Link to={{pathname:"/profil/settings", search:"?category=secutity"}}><li>Безпека</li></Link>
+            <Link to={{pathname:"/profil/settings", search:"?category=privacy"}}><li>Приватність</li></Link>
+            <Link to={{pathname:"/profil/settings", search:"?category=notification"}}><li>Сповіщення</li></Link>
+            <Link to={{pathname:"/profil/settings", search:"?category=blacklist"}}><li>Чоний список</li></Link>
 
           </ul>
         </div>

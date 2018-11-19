@@ -1,4 +1,6 @@
-import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS, ADD_NEW_MUSIC_IN_MY_LIST, CHANGE_SELECTED_FRIEND, CHANGE_FILTERS_FRIEND} from '../constants'
+import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS,
+  ADD_NEW_MUSIC_IN_MY_LIST, CHANGE_SELECTED_FRIEND,
+  CHANGE_FILTERS_FRIEND, LOGIN_MAIN_PROFILE} from '../constants'
 
 
 export function deleteMusicElement(id){
@@ -37,9 +39,16 @@ export function changeSelectedFiend(element){
   }
 }
 
-export function changeFilterFriends(active) {
+export function changeFilterFriends(filter) {
   return{
     type:CHANGE_FILTERS_FRIEND,
-    payload:{active}
+    payload:{filter}
+  }
+}
+
+export function loginMainProfile(date){
+  return{
+    type:LOGIN_MAIN_PROFILE,
+    payload:{date}
   }
 }

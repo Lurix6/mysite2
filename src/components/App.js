@@ -18,11 +18,10 @@ class App extends Component {
       <div className="siteBody">
         <div>
             <Menu />
-                <Route exact  path='/account' component={User}/>
-                <Route path='/settings' component={Settings}/>
-                <Route path='/music' component={Music}/>
-                <Route path='/friends' component={Friends} />
-
+                <Route exact  path='/profil/' component={User}/>
+                <Route path='/profil/settings' component={Settings}/>
+                <Route path='/profil/music' component={Music}/>
+                <Route path='/profil/friends' component={Friends} />
         </div>
       </div>
     </div>

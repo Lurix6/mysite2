@@ -28,14 +28,12 @@ export default class Music extends React.Component{
     }
 
     openCategory = () => {
-      const {match} = this.props
-      console.log(match.url);
       return(
         <div>
-          <Route  path='/music/playList'
+          <Route  path='/profil/music/playList'
           component={PlayList}/>
-          <Route exact path='/music/recommend' component={Recommend} />
-          <Route exact path='/music/myList' component={MusicList} />
+          <Route exact path='/profil/music/recommend' component={Recommend} />
+          <Route exact path='/profil/music/myList' component={MusicList} />
         </div>
       )
 

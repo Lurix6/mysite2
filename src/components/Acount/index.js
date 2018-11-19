@@ -8,7 +8,6 @@ class App extends Component {
 
   render() {
     let location = this.props
-    console.log('params---------------------',location.location.search.replace('?id=', '') );
 
     const selectedAccount = this.props.selectedFriend
 

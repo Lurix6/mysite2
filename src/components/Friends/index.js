@@ -6,14 +6,7 @@ import {changeFilterFriends} from '../../AC'
 import './style.css'
 
 class Friends extends Component {
-  constructor(props) {
-      super(props);
 
-
-      this.state = {
-        friendsFilter : props.friendsFilter
-        }
-    }
 
   render() {
     const friendsElemet = this.props.friensList.map(element => <li key={element.id}>
@@ -26,8 +19,8 @@ class Friends extends Component {
         <div id='friendsMainBlock'>
           <div id='friendsFiltersOne'>
             <div>
-              <div onClick={this.handleAllFriends} className={this.state.friendsFilter.active ? 'activeFriends' : null}>Усі друзі<span>180</span></div>
-              <div onClick={this.handleActiveFriends} className={this.state.friendsFilter.active ? null : 'activeFriends' }>Друзі онлайн<span>14</span></div>
+              <div onClick={this.handleAllFriends} className={this.props.friendFilter.online ? 'activeFriends' : null}>Усі друзі<span>{this.props.friensList.length}</span></div>
+              <div onClick={this.handleActiveFriends} className={this.props.friendFilter.online ? null : 'activeFriends' }>Друзі онлайн<span>14</span></div>
             </div>
             <button id='findFriends'>
               Знайти друів
@@ -36,13 +29,13 @@ class Friends extends Component {
           <hr />
           <div id='searchFriendName'>
             <img src='https://www.freeiconspng.com/uploads/search-icon-png-18.png' />
-            <input id='searchInputName' type='text' autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" placeholder="Почніть вводити ім'я друга" />
+            <input id='searchInputName' type='text' autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" placeholder="Почніть вводити ім'я друга" onChange={this.handlefriendFilterName} />
             <div id='friendsFiltersTwo'><div>Параметри</div><img id='parametersFilters' src='https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-128.png' /></div>
           </div>
           <hr />
           <div className='friedsList'>
             <ul>
-                {this.state.friendsFilter.active ? friendsElemet : null}
+                { friendsElemet }
             </ul>
           </div>
         </div>
@@ -50,17 +43,21 @@ class Friends extends Component {
     );
   }
 
+  handlefriendFilterName = (ev) => {
+    this.props.changeFilterFriends({...this.props.friendFilter,name: ev.target.value})
+  }
+
   handleAllFriends = () => {
-    this.props.changeFilterFriends(true)
+    this.props.changeFilterFriends({...this.props.friendFilter,online: true })
   }
 
   handleActiveFriends = () => {
-    this.props.changeFilterFriends(false)
+    this.props.changeFilterFriends({...this.props.friendFilter,online: false })
   }
 
 }
 
 export default connect(state => ({
   friensList : filterActiveFriends(state),
-  friendsFilter : state.friendsFilter
+  friendFilter : state.friendsFilter
 }), {changeFilterFriends})(Friends)

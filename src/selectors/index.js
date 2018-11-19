@@ -15,8 +15,20 @@ export const filterSearchMusics = createSelector(musicsGetter, searchDate, (musi
 } )
 
 
-export const filterActiveFriends = createSelector(allFriends,friendsFilter ,(accounts, friendsFilter) => {
-  return accounts
+export const filterActiveFriends = createSelector(allFriends,friendsFilter ,(friends, filter) => {
+  let result
+  if (!filter.online){
+    result = friends.filter(element =>
+      element.online === filter.online)
+  }else {
+    result = friends
+  }
+  if (filter.name) {
+    result = result.filter(element =>
+    element.firstName.toUpperCase().includes(filter.name.toUpperCase()) || element.lastName.toUpperCase().includes(filter.name.toUpperCase()))
+  }
+
+  return result
 })
 
 
