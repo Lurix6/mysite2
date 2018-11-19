@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
 import FriendElement from './FriendElement'
 import {connect} from 'react-redux'
+import {filterActiveFriends} from '../../selectors'
+import {changeFilterFriends} from '../../AC'
 import './style.css'
 
 class Friends extends Component {
+  constructor(props) {
+      super(props);
+
+
+      this.state = {
+        friendsFilter : props.friendsFilter
+        }
+    }
 
   render() {
-    const friendsElemets = this.props.friensList.map(element => <li key={element.id}>
+    const friendsElemet = this.props.friensList.map(element => <li key={element.id}>
       <FriendElement
           element= {element}
       />
@@ -16,8 +26,8 @@ class Friends extends Component {
         <div id='friendsMainBlock'>
           <div id='friendsFiltersOne'>
             <div>
-              <div id='friendsAll'>Усі друзі<span>180</span></div>
-              <div id='friendsActive'>Друзі онлайн<span>14</span></div>
+              <div onClick={this.handleAllFriends} className={this.state.friendsFilter.active ? 'activeFriends' : null}>Усі друзі<span>180</span></div>
+              <div onClick={this.handleActiveFriends} className={this.state.friendsFilter.active ? null : 'activeFriends' }>Друзі онлайн<span>14</span></div>
             </div>
             <button id='findFriends'>
               Знайти друів
@@ -32,15 +42,25 @@ class Friends extends Component {
           <hr />
           <div className='friedsList'>
             <ul>
-                {friendsElemets}
+                {this.state.friendsFilter.active ? friendsElemet : null}
             </ul>
           </div>
         </div>
 
     );
   }
+
+  handleAllFriends = () => {
+    this.props.changeFilterFriends(true)
+  }
+
+  handleActiveFriends = () => {
+    this.props.changeFilterFriends(false)
+  }
+
 }
 
 export default connect(state => ({
-  friensList : state.accounts
-}))(Friends)
+  friensList : filterActiveFriends(state),
+  friendsFilter : state.friendsFilter
+}), {changeFilterFriends})(Friends)

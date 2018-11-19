@@ -20,7 +20,7 @@ export default class extends React.Component {
           <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/group-xxl.png" alt=""/></div>
           <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/joystick-xxl.png" alt=""/></div>
           <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/star-5-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/start-xl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/start-xxl.png" alt=""/></div>
           <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/headphones-3-xxl.png" alt=""/>
         </div>
 
@@ -32,8 +32,8 @@ export default class extends React.Component {
         </div>
 
         <div className="header_section_two">
-          <div className="header_item headerButton"><a href=""><img src="https://www.iconsdb.com/icons/preview/white/settings-5-xxl.png" alt=""/></a></div>
-          <div className="header_item headerButton"><Link to='/'><img src="https://www.iconsdb.com/icons/preview/white/logout-xxl.png" alt=""/></Link></div>
+            <div className="header_item headerButton"><Link to='/settings?category=general'><img src="https://www.iconsdb.com/icons/preview/white/settings-5-xxl.png" alt=""/></Link></div>
+          <div className="header_item headerButton"><a href=""><img src="https://www.iconsdb.com/icons/preview/white/logout-xxl.png" alt=""/></a></div>
         </div>
       </div>
 

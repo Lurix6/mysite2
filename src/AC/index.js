@@ -1,4 +1,4 @@
-import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS, ADD_NEW_MUSIC_IN_MY_LIST, CHANGE_SELECTED_FRIEND} from '../constants'
+import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS, ADD_NEW_MUSIC_IN_MY_LIST, CHANGE_SELECTED_FRIEND, CHANGE_FILTERS_FRIEND} from '../constants'
 
 
 export function deleteMusicElement(id){
@@ -34,5 +34,12 @@ export function changeSelectedFiend(element){
   return{
     type: CHANGE_SELECTED_FRIEND,
     payload: {element}
+  }
+}
+
+export function changeFilterFriends(active) {
+  return{
+    type:CHANGE_FILTERS_FRIEND,
+    payload:{active}
   }
 }

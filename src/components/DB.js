@@ -264,6 +264,13 @@ export const noveltySongs = [
 	}
 ]
 
+export const filterForFriends ={
+		name:null,
+		active: true,
+		city:null
+
+}
+
 export const fullMusics = [
 		{
 			"id": "56c782f18990ecf954f6e027",

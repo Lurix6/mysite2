@@ -5,6 +5,7 @@ import search from './music/search'
 import noveltySongs from './music/exempleNewSongs'
 import accounts from './friends/friends'
 import allMusic from './music/allMusic'
+import friendsFilter from './friends/filter'
 import selectedFriend from './friends/selectedFriend'
 
 export default combineReducers({
@@ -12,5 +13,5 @@ export default combineReducers({
     curentElement,
     search, noveltySongs,
     accounts, allMusic,
-    selectedFriend
+    selectedFriend, friendsFilter
 })

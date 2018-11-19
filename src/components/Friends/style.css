@@ -39,7 +39,7 @@
   color: #939393;
 }
 
-#friendsAll{
+.activeFriends{
     border-bottom: 2px solid #5181b8;
 }
 
@@ -71,6 +71,7 @@
 }
 
 #friendsFiltersTwo{
+  cursor: pointer;
   margin-left: 10px;
 }
 

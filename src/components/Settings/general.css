@@ -1,0 +1,37 @@
+.settingsTitle{
+  background: red;
+  width: 100%;
+}
+
+.settingsTitle > div{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.mainTitle{
+  font-size: 22px;
+  padding: 20px 0 0 20px;
+  height: 40px;
+}
+
+.changeStyle{
+  margin: 15px 0 0 20px;
+  display: flex;
+  height: 60px;
+}
+
+.title{
+  width: 35%;
+}
+
+.buttonSelect{
+  width: 45%;
+}
+
+.buttonSelect button{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 15px;
+}

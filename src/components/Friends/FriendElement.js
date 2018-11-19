@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {changeSelectedFiend} from '../../AC'
+import {Link} from 'react-router-dom'
 
 
 class FriendElement extends React.Component {
@@ -12,10 +13,12 @@ class FriendElement extends React.Component {
 	        return (
               <div className='friendElement'>
                   <div>
+									<Link to={{pathname:"/account",search:"?id="+element.id}}>
                     <img className='friendAvatar' src={element.img} onClick={this.handleChangeFriend} />
+										</Link>
                     <div className='friendPeronalData'>
                       <div className='friendName' onClick={this.handleChangeFriend} >
-                        {element.firstName} {element.lastName}
+											<Link to={"/account?id="+element.id}> {element.firstName} {element.lastName}</Link>
                       </div>
                       <div className='friendStatus'>
                         {element.status}

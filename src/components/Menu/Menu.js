@@ -9,7 +9,7 @@ class Menu extends React.Component {
     console.log(match);
     return (
       <div className="menu">
-        <div id="home"><img src="/assets/img/music/home.png" alt=""/><Link to ="/">Моя сторінка</Link></div>
+        <div id="home"><img src="/assets/img/music/home.png" alt=""/><Link to ="/account">Моя сторінка</Link></div>
         <div id="news"><img src="/assets/img/music/news.png" alt=""/>Новини</div>
         <div id="message"><img src="/assets/img/music/message.png" alt=""/>Повідомлення</div>
         <div id="friens"><img src="/assets/img/music/friends.png" alt=""/><Link to='/friends'>Друзі</Link></div>

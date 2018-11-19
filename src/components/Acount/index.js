@@ -3,12 +3,15 @@ import '../style/User.css'
 import {connect} from 'react-redux'
 import AccountMusicElement from './AccountMusicElement'
 
+
 class App extends Component {
 
   render() {
+    let location = this.props
+    console.log('params---------------------',location.location.search.replace('?id=', '') );
 
     const selectedAccount = this.props.selectedFriend
-    console.log(selectedAccount);
+
 
     const musicEelements = this.getFirstThreeElement(selectedAccount.musicList).map(element => <li><AccountMusicElement id={element} /></li>)
 
