@@ -1,13 +1,14 @@
 import React from 'react'
 import '../style/header.css'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
-export default class extends React.Component {
+ class Header extends React.Component {
 
   render(){
 
-    const style = {background: 'linear-gradient(to top,#7f7f7f,#5b5b5b)'}
-
+    const style = this.props.loginProfil.siteStyle
+    console.log('header', style);
 
       return (
       <div className="header" style={style}>
@@ -42,3 +43,7 @@ export default class extends React.Component {
   }
 
 }
+
+export default connect(state => ({
+  loginProfil : state.loginProfil
+}))(Header)

@@ -123,6 +123,10 @@ hr {
 
 }
 
+.friendName > a{
+  color: #2a5885;
+}
+
 .friendStatus{
   color: #656565;
   margin-bottom: 5px;
@@ -160,4 +164,16 @@ hr {
 .bestFriendTag{
   background-color: #e8f2dc;
   color: #37702a;
+}
+
+/*more fitters*/
+
+#moreFilters div{
+  margin: 10px 0 0 10px;
+}
+#moreFilters p{
+  margin-right: 5px;
+}
+#toP{
+  margin-left: 5px;
 }

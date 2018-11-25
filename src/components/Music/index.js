@@ -7,8 +7,9 @@ import PlayList from'./PlayList'
 import Search from './Search'
 import Recommend from './Recommend'
 import {Route} from 'react-router-dom'
+import {connect} from 'react-redux'
 
-export default class Music extends React.Component{
+class Music extends React.Component{
 
     render(){
 
@@ -28,14 +29,15 @@ export default class Music extends React.Component{
     }
 
     openCategory = () => {
-      return(
-        <div>
-          <Route  path='/profil/music/playList'
-          component={PlayList}/>
-          <Route exact path='/profil/music/recommend' component={Recommend} />
-          <Route exact path='/profil/music/myList' component={MusicList} />
-        </div>
-      )
+          switch (this.props.curentMusicCategory.defaultMusicCategory) {
+            case 'playList': return <div><PlayList /></div>
+            case 'recommend': return <div><Recommend /></div>
+            case 'myList': return <div><MusicList /></div>
 
+          }
     }
 }
+
+export default connect(state =>({
+    curentMusicCategory: state.curentElement
+}))(Music)

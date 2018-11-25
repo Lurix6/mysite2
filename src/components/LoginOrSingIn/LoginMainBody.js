@@ -1,34 +1,42 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {withRouter,Link} from 'react-router-dom'
+import {loginMainProfile} from '../../AC'
+import {connect} from 'react-redux'
+import { browserHistory } from 'react-router-dom';
+import { push } from 'react-router-redux';
+import PropTypes from "prop-types";
 
-export default class LoginMainBody extends React.Component {
+class LoginMainBody extends React.Component {
+
+	static contextTypes = {
+	router: PropTypes.object
+}
 
 	constructor(props){
 		super(props)
 
 		this.state = {
-			  border: '',
 				loginDate : {
 					email: null,
-					password:null,
-					buttonActive: false
-				}
+					password:null
+				},
+				id: null
 		}
 	}
 
 	render(){
+				const inputStyleRed = {borderColor: 'red'}
 
-
-			  const style = { backgroundColor: this.state.border };
 		return <div id='loginMainBody'>
         <div id='aboutAs'>
         </div>
         <div id='forms'>
         	<div id='logIn'>
-						<input id='phoneAndEmail' type='text' placeholder='Phone or email' onChange={this.handlEmail}/>
-						<input id='password' type='text' placeholder='Password'  size="30" onChange={this.handlPassword} />
-						<div><Link to='/profil'><button  id='logInBtn'  disabled={!this.state.loginDate.buttonActive ? 'disabled' : null}>Log In</button></Link><p>Forgot your password?</p></div>
-				  </div>
+						<input id='phoneAndEmail' type='text' style={this.state.loginDate.email ? null : inputStyleRed} placeholder='Phone or email' onChange={this.changeEmail}/>
+						<input id='password' type='text' style={this.state.loginDate.password ? null : inputStyleRed} placeholder='Password' onChange={this.changePassword} />
+						<div><Link to={this.state.id ? this.state.id : '/'}><button onClick={this.login}>Log In</button></Link><p>Forgot your password?</p></div>
+						<div></div>
+					</div>
           <div id='signUp'>
 							<p>Sign up</p>
 							<input id='firstName' type='text' placeholder='Your first name'/>
@@ -44,29 +52,43 @@ export default class LoginMainBody extends React.Component {
 
 	}
 
-	handlEmail = (ev) => {
-		const emailOrPass = ev.target.value
-		if (emailOrPass.length > 10 && emailOrPass.length < 30) {
-				if(this.testingEmail(emailOrPass)){
-					this.setState({
-						loginDate: {...this.state.loginDate, email: emailOrPass}
-					})
-					this.disabledButton()
-				}
+	changeEmail = (ev) =>{
+		const email = ev.target.value
+		if (this.testingEmail(email)) {
+			this.setState({
+				loginDate: {...this.state.loginDate, email: email }
+			})
+
+		}else {
+			this.setState({
+				loginDate: {...this.state.loginDate, email: null }
+			})
 		}
+
+	}
+	changePassword = (ev) =>{
+		const password = ev.target.value
+		if (this.testingPassword(password)) {
+				this.setState({
+					loginDate: {...this.state.loginDate, password: password}
+				})
+		}else {
+				this.setState({
+					loginDate: {...this.state.loginDate, password: null}
+				})
+
+		}
+
 	}
 
-	handlPassword = (ev) => {
-		const password = ev.target.value
-			if (password.length > 5 && password.length < 20) {
-					if (this.testingPassword(password)) {
-						this.setState({
-							loginDate: {...this.state.loginDate, password: password}
-						})
-
-						this.disabledButton()
-					}
-			}
+	login = () => {
+		const account = this.props.allProfile.filter(element => element.password === this.state.loginDate.password && element.email === this.state.loginDate.email)
+		if (account.length > 0) {
+			this.setState({
+				id: '/profil/id/'+account[0].id
+			})
+			this.props.loginMainProfile(account[0]);
+		}
 	}
 
 	testingEmail = (email) =>{
@@ -87,18 +109,9 @@ export default class LoginMainBody extends React.Component {
 			}
 		}
 
-		setSomePropsNull = (props) =>{
-			this.setState({
-					loginDate: {...this.state.loginDate, props: null}
-			})
-			console.log(this.state.loginDate, ' ----------------------------');
-		}
-
-	redStyle = () => {
-		this.setState({
-			border: '#d1d1d1;'
-		})
-	}
-
 
 }
+
+export default connect(state =>({
+		allProfile : state.accounts
+}),{loginMainProfile})(withRouter(LoginMainBody))

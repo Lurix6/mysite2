@@ -1,15 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 import '../style/Menu.css'
 
 class Menu extends React.Component {
 
   render() {
-    const {match} = this.props
-    console.log(match);
+    const style = this.props.loginProfil.siteStyle
     return (
-      <div className="menu">
-        <div id="home"><img src="/assets/img/music/home.png" alt=""/><Link to ="/profil">Моя сторінка</Link></div>
+      <div className="menu" style={style}>
+        <div id="home"><img src="/assets/img/music/home.png" alt=""/><Link to ='/profil/myProfile'>Моя сторінка</Link></div>
         <div id="news"><img src="/assets/img/music/news.png" alt=""/>Новини</div>
         <div id="message"><img src="/assets/img/music/message.png" alt=""/>Повідомлення</div>
         <div id="friens"><img src="/assets/img/music/friends.png" alt=""/><Link to='/profil/friends'>Друзі</Link></div>
@@ -24,4 +24,6 @@ class Menu extends React.Component {
 
 }
 
-export default Menu
+export default connect(state => ({
+  loginProfil : state.loginProfil
+}))(Menu)

@@ -5,14 +5,13 @@ import {connect} from 'react-redux'
 
 class CurentMusic extends React.Component{
 
-  endedMusic = () => {
-  }
+
 
   render(){
     const {curentElement, musics} = this.props
     // console.log(curentElement, 'element ', musics, ' musics');
 
-    const musicElement = curentElement
+    const musicElement = curentElement.music
 
 
 

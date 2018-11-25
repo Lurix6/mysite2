@@ -18,7 +18,8 @@ class App extends Component {
       <div className="siteBody">
         <div>
             <Menu />
-                <Route exact  path='/profil/' component={User}/>
+                <Route exact  path='/profil/id/:id' component={User}/>
+                <Route exact  path='/profil/myProfile' component={User}/>
                 <Route path='/profil/settings' component={Settings}/>
                 <Route path='/profil/music' component={Music}/>
                 <Route path='/profil/friends' component={Friends} />

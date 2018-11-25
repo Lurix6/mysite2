@@ -13,12 +13,12 @@ class FriendElement extends React.Component {
 	        return (
               <div className='friendElement'>
                   <div>
-									<Link to={{pathname:"/profil/account?id="+element.id,search:"?id="+element.id}}>
+									<Link to={"/profil/id/"+element.id}>
                     <img className='friendAvatar' src={element.img} onClick={this.handleChangeFriend} />
 										</Link>
                     <div className='friendPeronalData'>
                       <div className='friendName' onClick={this.handleChangeFriend} >
-											<Link to={"/profil/account?id="+element.id}> {element.firstName} {element.lastName}</Link>
+											<Link to={"/profil/id/"+element.id}> {element.firstName} {element.lastName}</Link>
                       </div>
                       <div className='friendStatus'>
                         {element.status}

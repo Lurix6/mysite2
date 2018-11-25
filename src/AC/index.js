@@ -1,6 +1,8 @@
 import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS,
   ADD_NEW_MUSIC_IN_MY_LIST, CHANGE_SELECTED_FRIEND,
-  CHANGE_FILTERS_FRIEND, LOGIN_MAIN_PROFILE} from '../constants'
+  CHANGE_FILTERS_FRIEND, LOGIN_MAIN_PROFILE,
+  CHANGE_CURENT_MUSIC_CATEGORY, CHANGE_SITE_STYLE,
+  CHANGE_PRIVATE_DATA_MAIN_PROFILE} from '../constants'
 
 
 export function deleteMusicElement(id){
@@ -46,9 +48,30 @@ export function changeFilterFriends(filter) {
   }
 }
 
-export function loginMainProfile(date){
+export function loginMainProfile(mainProfil){
   return{
     type:LOGIN_MAIN_PROFILE,
-    payload:{date}
+    payload:{mainProfil}
+  }
+}
+
+export function change_curent_music_category(category){
+  return{
+    type:CHANGE_CURENT_MUSIC_CATEGORY,
+    payload:{category}
+  }
+}
+
+export function changeSiteStyle(style){
+  return{
+    type:CHANGE_SITE_STYLE,
+    payload:{style}
+  }
+}
+
+export function changePrivateDataMainProfile(props){
+  return{
+    type: CHANGE_PRIVATE_DATA_MAIN_PROFILE,
+    payload: {props}
   }
 }

@@ -7,11 +7,14 @@ import accounts from './friends/friends'
 import allMusic from './music/allMusic'
 import friendsFilter from './friends/filter'
 import selectedFriend from './friends/selectedFriend'
+import loginProfil from './profile/login'
+
 
 export default combineReducers({
     musics: songs,
     curentElement,
     search, noveltySongs,
     accounts, allMusic,
-    selectedFriend, friendsFilter
+    selectedFriend, friendsFilter,
+    loginProfil
 })

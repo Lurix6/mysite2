@@ -1,4 +1,4 @@
-export let Profils = [
+export const Profils = [
 {
 	id:'0000',
 	email:'vasya_popovych23@gmai.com',
@@ -10,13 +10,14 @@ export let Profils = [
 	img:'https://i.pinimg.com/originals/a3/13/8d/a3138d75e764cdd799ad3901ef90b8e6.jpg',
 	rating: 10,
 	tag:['familyTag', 'bestFriendTag'],
-	background:'../img/account/0000/img',
+	siteStyle: null,
 	personalDate : {
 		country:'Україна',
 		city:'Ужгород',
-		language:'Українська',
+		language:['Українська'],
 		birthday:'19 жовтня 1997',
-		age: 21
+		age: 21,
+		sex: 'male'
 	},
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
 },{
@@ -29,18 +30,19 @@ export let Profils = [
 	online: true,
 	img:'https://pp.userapi.com/c409317/v409317816/5046/aTFkbRVrS44.jpg',
 	rating: 9.8,
-	background:'../img/account/0000/img',
+	siteStyle: null,
 	personalDate : {
 		country:'Україна',
 		city:'Ужгород',
-		language:'Українська',
+		language:['Українська'],
 		birthday:'9 вересня 1994',
-		age: 24
+		age: 24,
+		sex: 'male'
 	},
 	musicList: ['d700e2f880e148ada756061309017d33','d6121560c687494896e74ab39522a871','eb328530519540e4b5f15827d0c11afe','c4fa87628b364114847f8b7f6cf0194c']
 },{
 	id:'0002',
-	email:'basarabonn@gmailcom',
+	email:'basarabonn@gmail.com',
 	password:'basarabbbb666',
 	status: 'Не доверяйте своему сердцу – оно стучит!',
 	firstName:'Vasya',
@@ -48,51 +50,54 @@ export let Profils = [
 	online: false,
 	img:'https://pp.userapi.com/c622118/v622118545/1f179/rX8h-Sta7eI.jpg',
 	rating: 10,
-	background:'../img/account/0000/img',
+	siteStyle: null,
 	personalDate : {
 		country:'Україна',
 		city:'Львів',
-		language:'Українська',
+		language:['Українська'],
 		birthday:'15 квітня 1991',
-		age: 27
+		age: 27,
+		sex: 'male'
 	},
 	musicList: ['56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206','wd14eut1kt','r53ht09e21','x50g14r080']
 },{
 	id:'0003',
-	email:'basarrabIndriy',
-	password:'andiy_basarab@gmai.com',
+	email:'andiy_basarab@gmai.com',
+	password:'basaranaAndrr',
 	status: 'Нужна? добейся. Не сдавайся.',
 	firstName:'Andriy',
 	lastName:'Basaraba',
 	online: false,
 	img:'https://sun9-1.userapi.com/hmI5H6-4PZ0SZMm7HhoNozmHjiVokZy7oI_xGQ/Xn57_iLc07U.jpg',
 	rating: 10,
-	background:'../img/account/0000/img',
+	siteStyle: null,
 	personalDate : {
 		country:'Україна',
 		city:'Київ',
-		language:'Українська',
+		language:['Українська'],
 		birthday:'3 червня 2001',
-		age: 17
+		age: 17,
+		sex: 'male'
 	},
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f197fe2bad471b3740','d700e2f880e148ada756061309017d33','723767e78d4a40f5b254eda77eae0ac6','d6121560c687494896e74ab39522a871','c4fa87628b364114847f8b7f6cf0194c','203318a9d82f4bd1816472d961e2d24d']
 },{
 	id:'0004',
 	email:'rusnakIvann@gmail.com',
-	password:'rusnakvanja69',
+	password:'696969',
 	status: 'А ты, козёл, мог стать и Козерогом!',
 	firstName:'Vanja',
 	lastName:'Rusnak',
 	online: true,
 	img:'https://avatars.mds.yandex.net/get-pdb/921063/e3777ed8-32e4-4478-8d6e-d2d45bb8c751/orig',
 	rating: 8.8,
-	background:'../img/account/0000/img',
+	siteStyle: null,
 	personalDate : {
 		country:'Україна',
 		city:'Одеса',
-		language:'Українська',
+		language:['Українська'],
 		birthday:'21 квітня 1996',
-		age: 22
+		age: 22,
+		sex: 'male'
 	},
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
 },{
@@ -106,18 +111,19 @@ export let Profils = [
 	tag:['bestFriendTag'],
 	img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUJuXVSf14c7Q5rpkk0vAwlLYL2Qg6gduka-NDtoPei08EftszeA',
 	rating: 7.8,
-	background:'https://pp.userapi.com/c619629/v619629382/2ab7/mNU4AyZvXMo.jpg',
+	siteStyle: null,
 	personalDate : {
 		country:'Чехія',
 		city:'Прага',
-		language:'Українська, Чеська',
+		language:['Українська', 'Чеська'],
 		birthday:'25 березня 1998',
-		age: 20
+		age: 20,
+		sex: 'male'
 	},
 	musicList: ['56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206','wd14eut1kt','r53ht09e21','x50g14r080']
 },{
 	id:'0006',
-	email:'juliapopovych@gmailcom',
+	email:'juliapopovych@gmail.com',
 	password:'julia6666',
 	status: 'Слабость всегда спасалась верой в чудеса',
 	firstName:'Julia',
@@ -125,14 +131,15 @@ export let Profils = [
 	online: false,
 	img:'https://bipbap.ru/wp-content/uploads/2017/04/3HZmEfZdLwg.jpg',
 	rating: 10,
-	background:'../img/account/0000/img',
+	siteStyle: null,
 	tag:['familyTag'],
 	personalDate : {
 		country:'Україна',
 		city:'Косівська-Поляна',
-		language:'Українська',
+		language:['Українська'],
 		birthday:'12 червень 2006',
-		age: 13
+		age: 13,
+		sex: 'female'
 	},
 	musicList: ['56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782fghgfc2c3268ddb3206','kwu3kzt2db']
 },{
@@ -145,13 +152,14 @@ export let Profils = [
 	online: false,
 	img:'https://i.pinimg.com/474x/80/ee/77/80ee7793d33dd92605eab2fecb522f2f.jpg',
 	rating: 9.5,
-	background:'../img/account/0000/img',
+	siteStyle: null,
 	personalDate : {
 		country:'Україна',
-		city:'Льів',
-		language:'Українська',
+		city:'Львів',
+		language:['Українська'],
 		birthday:'9 листопад 2001',
-		age: 17
+		age: 17,
+		sex: 'female'
 	},
 	musicList: ['56c782f197fe2bad471b3740','wd14eut1kt','kwu3kzt2db','d6121560c687494896e74ab39522a871','6b554e1b97e2487ca692622ba588f5f7']
 },
@@ -167,7 +175,7 @@ export const selectedFriend = {
 	online: false,
 	img:'https://bipbap.ru/wp-content/uploads/2017/04/3HZmEfZdLwg.jpg',
 	rating: 10,
-	background:'../img/account/0000/img',
+	siteStyle: null,
 	tag:['familyTag'],
 	personalDate : {
 		country:'Україна',

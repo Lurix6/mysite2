@@ -6,14 +6,22 @@ import AccountMusicElement from './AccountMusicElement'
 
 class App extends Component {
 
-  render() {
-    let location = this.props
+  render(){
 
-    const selectedAccount = this.props.selectedFriend
+    let selectedAccount
+    const location = this.props.location
+    if (location.pathname === "/profil/myProfile") {
+      selectedAccount = this.props.mainProfile
+      console.log(selectedAccount);
+    }else {
+      selectedAccount = this.getAccountById(location)
 
 
-    const musicEelements = this.getFirstThreeElement(selectedAccount.musicList).map(element => <li><AccountMusicElement id={element} /></li>)
+    }
 
+
+
+    // const musicEelements = this.getFirstThreeElement(selectedAccount.musicList).map(element => <li><AccountMusicElement id={element} /></li>)
 
     return (
         <div className='userRoot'>
@@ -76,7 +84,6 @@ class App extends Component {
                   </div>
 
                 <div className="list_music">
-                    {musicEelements}
                 </div>
               </div>
               </div>
@@ -88,6 +95,17 @@ class App extends Component {
             </div>
 
     );
+  }
+
+  getAccountById = (location) => {
+      if (location.pathname === '/profil/my') {
+          console.log('main profile ',this.props.mainProfile, location.pathname === '/profil/my');
+          return this.props.mainProfile
+      }
+      const id = location.pathname.replace('/profil/id/', '')
+      const test = this.props.allProfile.filter(element => element.id === id)
+      return test[0]
+
   }
 
   getFirstThreeElement = (list) => {
@@ -110,5 +128,7 @@ class App extends Component {
 }
 
 export default connect(state => ({
-  selectedFriend : state.selectedFriend
+  selectedFriend : state.selectedFriend,
+  mainProfile: state.loginProfil,
+  allProfile: state.accounts
 }))(App);
