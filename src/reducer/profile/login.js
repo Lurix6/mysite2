@@ -22,7 +22,7 @@ import {LOGIN_MAIN_PROFILE, CHANGE_SITE_STYLE,
   		sex: 'male'
   	},
   	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
-    
+
   }
 
 
@@ -38,7 +38,7 @@ export default ( loginState = defaultLogin , action) => {
     switch (type) {
       case LOGIN_MAIN_PROFILE: return payload.mainProfil
       case CHANGE_SITE_STYLE: return {...loginState, siteStyle: {background: payload.style.background}}
-      case CHANGE_PRIVATE_DATA_MAIN_PROFILE: return {...loginState, firstName: payload.props.firstName, lastName: payload.props.lastName}
+      case CHANGE_PRIVATE_DATA_MAIN_PROFILE: return {...loginState, firstName: payload.props.firstName, lastName: payload.props.lastName, personalDate: {...loginState.personalDate, birthday: payload.props.birthday, city: payload.props.city, sex: payload.props.sex}}
 
         break;
     }

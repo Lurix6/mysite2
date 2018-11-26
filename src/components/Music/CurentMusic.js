@@ -9,8 +9,6 @@ class CurentMusic extends React.Component{
 
   render(){
     const {curentElement, musics} = this.props
-    // console.log(curentElement, 'element ', musics, ' musics');
-
     const musicElement = curentElement.music
 
 
@@ -26,7 +24,7 @@ class CurentMusic extends React.Component{
                   // muted
               />
                 <div id="about_current_music">
-                  <img src={musicElement.icon === null ? "https://www.iconsdb.com/icons/preview/black/note-xxl.png" : musicElement.icon}   />
+                  <img src={musicElement.icon === null ? "https://cdn4.iconfinder.com/data/icons/devine_icons/Black/PNG/File%20Types/MP3.png" : musicElement.icon}   />
                     <div>
                         <p>{musicElement.title}</p>
                         <p>{musicElement.executor}</p>

@@ -4,28 +4,27 @@ import {connect} from 'react-redux'
 class AccountMusicElement extends React.Component{
 
   render(){
-
-    const musicObj = this.getMusicObjectWithID()
-
-
-
+    const element = this.getObjectMusicElementById(this.props.element)
+    console.log(element, 'element');
     return(<div>
                 <div id="play_music"></div>
                 <div id="author_music">
-                  {musicObj[0].executor} -
+                  {element.executor} -
                 </div>
                 <div className="name_music">
-                  - {musicObj[0].title}
+                  - {element.title}
                 </div>
             </div>)
 
 
     }
 
+    getObjectMusicElementById = (selected) => {
+      return this.props.allMusic.filter(element => element.id == selected)[0]
 
-    getMusicObjectWithID = (id) => {
-      return this.props.allMusic.filter(element => element.id === this.props.id)
     }
+
+
 }
 
 export default connect(state => ({

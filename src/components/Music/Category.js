@@ -9,26 +9,23 @@ class Category extends React.Component{
 	render(){
 
 	return  (<div className="category">
-                <a onClick={this.categotyMyList}>Моя Музика</a>
-                <a onClick={this.categotyPlayList}>Плейлисти</a>
-								<a onClick={this.categotyRecommend}>Рекомендовані</a>
+                <a className={this.props.activeCategory === 'myList' ? 'active' : null } onClick={this.categotyMyList}>Моя Музика</a>
+                <a className={this.props.activeCategory === 'playList' ? 'active' : null } onClick={this.categotyPlayList}>Плейлисти</a>
+								<a className={this.props.activeCategory === 'recommend' ? 'active' : null } onClick={this.categotyRecommend}>Рекомендовані</a>
 
 							</div>)
 
 
 	}
 
-	categotyMyList = () =>{
-		this.props.change_curent_music_category('myList');
-		console.log('myList');
+	categotyMyList = (ev) =>{
+		this.props.changeCategoty('myList');
 	}
-	categotyPlayList = () =>{
-		this.props.change_curent_music_category('playList');
-		console.log('playList');
+	categotyPlayList = (ev) =>{
+		this.props.changeCategoty('playList');
 	}
-	categotyRecommend = () =>{
-		this.props.change_curent_music_category('recommend');
-		console.log('recommend');
+	categotyRecommend = (ev) =>{
+		this.props.changeCategoty('recommend');
 	}
 
 
@@ -38,7 +35,7 @@ class Category extends React.Component{
 
 
 
-export default connect(null, {change_curent_music_category})(Category)
+export default Category
 
 
 

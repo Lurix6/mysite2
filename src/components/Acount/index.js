@@ -5,6 +5,13 @@ import AccountMusicElement from './AccountMusicElement'
 
 
 class App extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      moreMusic: false
+    }
+  }
 
   render(){
 
@@ -18,11 +25,6 @@ class App extends Component {
 
 
     }
-
-
-
-    // const musicEelements = this.getFirstThreeElement(selectedAccount.musicList).map(element => <li><AccountMusicElement id={element} /></li>)
-
     return (
         <div className='userRoot'>
           <div className="main_site_body_container">
@@ -74,7 +76,7 @@ class App extends Component {
           </div>
             <div id="additional">
               <div className="my_music">
-                  <div id="current_music" >
+                  <div onClick={this.handleMoreMusic} id="current_music" >
                     <div>
                       <p><span>{selectedAccount.musicList.length} </span>Аудіозаписи</p>
                     </div>
@@ -82,19 +84,20 @@ class App extends Component {
                       <p>Усі</p>
                     </div>
                   </div>
-
                 <div className="list_music">
+                  {this.showMusicList(selectedAccount)}
                 </div>
               </div>
-              </div>
-
-              <div className="records_or_all">
-                  <p>Записи</p>
-                  <p id="all">Всі</p>
               </div>
             </div>
 
     );
+  }
+
+  handleMoreMusic = () => {
+    this.setState({
+      moreMusic: !this.state.moreMusic
+    })
   }
 
   getAccountById = (location) => {
@@ -107,6 +110,17 @@ class App extends Component {
       return test[0]
 
   }
+
+
+  showMusicList = (account) => {
+    if (this.state.moreMusic) {
+      return account.musicList.map(element => <AccountMusicElement element={element} key={element} />)
+    }else {
+      return this.getFirstThreeElement(account.musicList).map(element => <AccountMusicElement element={element} key={element} />)
+    }
+
+  }
+
 
   getFirstThreeElement = (list) => {
       if (list.length <= 3 && list.length !== 0)

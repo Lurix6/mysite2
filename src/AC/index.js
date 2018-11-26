@@ -2,7 +2,7 @@ import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS,
   ADD_NEW_MUSIC_IN_MY_LIST, CHANGE_SELECTED_FRIEND,
   CHANGE_FILTERS_FRIEND, LOGIN_MAIN_PROFILE,
   CHANGE_CURENT_MUSIC_CATEGORY, CHANGE_SITE_STYLE,
-  CHANGE_PRIVATE_DATA_MAIN_PROFILE} from '../constants'
+  CHANGE_PRIVATE_DATA_MAIN_PROFILE, CLEAR_ALL_FILTER} from '../constants'
 
 
 export function deleteMusicElement(id){
@@ -55,13 +55,6 @@ export function loginMainProfile(mainProfil){
   }
 }
 
-export function change_curent_music_category(category){
-  return{
-    type:CHANGE_CURENT_MUSIC_CATEGORY,
-    payload:{category}
-  }
-}
-
 export function changeSiteStyle(style){
   return{
     type:CHANGE_SITE_STYLE,
@@ -73,5 +66,11 @@ export function changePrivateDataMainProfile(props){
   return{
     type: CHANGE_PRIVATE_DATA_MAIN_PROFILE,
     payload: {props}
+  }
+}
+
+export function clearAllFilter(){
+  return{
+    type: CLEAR_ALL_FILTER,
   }
 }

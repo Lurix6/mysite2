@@ -3,18 +3,12 @@ import './style.css'
 import Header from './Header'
 import LoginMainBody from './LoginMainBody'
 
-export default class LoginOrSingIn extends React.Component {
-
-	render(){
+const LoginOrSingIn = () => {
 
 		return <div id='LoginPage'>
 			<Header />
 			<LoginMainBody />
 		</div>
 
-
-
-	}
-
-
 }
+export default LoginOrSingIn

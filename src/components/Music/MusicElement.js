@@ -33,7 +33,7 @@ class MusicElement extends React.Component {
 		            onMouseLeave={hoverOff}>
 		        	<div>
 		        		{hover ? this.decorateMainImg(btnStyle) : null }
-						<img src={element.icon === null ? "https://www.iconsdb.com/icons/preview/black/note-xxl.png" : element.icon} style={btnStyle} alt="" />
+						<img src={element.icon === null ? "https://cdn4.iconfinder.com/data/icons/devine_icons/Black/PNG/File%20Types/MP3.png" : element.icon} style={btnStyle} alt="" />
 						<div className="list_music_inf">
 							<span>{element.title}</span>
 							<span>{element.executor}</span>
@@ -83,8 +83,6 @@ class MusicElement extends React.Component {
 
 			hendleAddNewMusick = () => {
 				const {addNewMusic, element, my_music_list} = this.props
-
-				console.log('add --- ', element);
 
 				addNewMusic(element)
 

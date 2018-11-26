@@ -6,10 +6,15 @@ import MusicList from './MusicList'
 import PlayList from'./PlayList'
 import Search from './Search'
 import Recommend from './Recommend'
-import {Route} from 'react-router-dom'
-import {connect} from 'react-redux'
 
 class Music extends React.Component{
+  constructor(props){
+    super(props)
+
+    this.state = {
+      category: 'myList'
+    }
+  }
 
     render(){
 
@@ -17,7 +22,7 @@ class Music extends React.Component{
         <div className ="musicBlock">
             <CurentMusic/>
             <div className="fullListMusic">
-              <Category/>
+              <Category changeCategoty={this.handleMusicCategory} activeCategory={this.state.category}/>
               <hr />
               <div className="showlist">
                 <Search />
@@ -29,15 +34,19 @@ class Music extends React.Component{
     }
 
     openCategory = () => {
-          switch (this.props.curentMusicCategory.defaultMusicCategory) {
+          switch (this.state.category) {
             case 'playList': return <div><PlayList /></div>
             case 'recommend': return <div><Recommend /></div>
             case 'myList': return <div><MusicList /></div>
 
           }
     }
+
+    handleMusicCategory = (category) =>{
+      this.setState({
+        category: category
+      })
+    }
 }
 
-export default connect(state =>({
-    curentMusicCategory: state.curentElement
-}))(Music)
+export default Music

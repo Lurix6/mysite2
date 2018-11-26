@@ -249,7 +249,7 @@ export const noveltySongs = [
 		"executor":"no name",
 		"title":"Грустное небо плачет♥",
 		"icon":null,
-		"url_link":"http://muzlishko.ru/dl/2559918d21b68",
+		"url_link":"http://muzlostyle.ru/dl/8216377ee2cce",
 		"full_time": "3:50"
 	},{
 		"id": "kwu3kzt2db",

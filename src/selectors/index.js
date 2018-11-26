@@ -27,6 +27,23 @@ export const filterActiveFriends = createSelector(allFriends,friendsFilter ,(fri
     result = result.filter(element =>
     element.firstName.toUpperCase().includes(filter.name.toUpperCase()) || element.lastName.toUpperCase().includes(filter.name.toUpperCase()))
   }
+  if(filter.sex !== 'all'){
+    if (filter.sex === 'male') {
+      result = result.filter(element =>
+      element.personalDate.sex === 'male')
+    }else {
+      result = result.filter(element =>
+      element.personalDate.sex === 'female')
+    }
+  }
+  if (filter.city) {
+    result = result.filter(element =>
+    element.personalDate.city.toUpperCase().includes(filter.city.toUpperCase()))
+  }
+  if(filter.age){
+    result = result.filter(element =>
+    element.personalDate.age <= filter.age.to && element.personalDate.age >= filter.age.from)
+  }
 
   return result
 })
