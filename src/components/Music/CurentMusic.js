@@ -5,14 +5,9 @@ import {connect} from 'react-redux'
 
 class CurentMusic extends React.Component{
 
-
-
   render(){
     const {curentElement, musics} = this.props
     const musicElement = curentElement.music
-
-
-
 
     return<div className = "curentMusic">
               <ReactAudioPlayer
@@ -39,24 +34,3 @@ export default connect(state => ({
   musics: state.musics,
   curentElement: state.curentElement
 }))(CurentMusic)
-
-
-/*    <div>
-        <img id="play" src="assets/img/music/play.png" alt="" />
-        <div id="next_previous">
-          <img src="assets/img/music/previous-track.png" alt="" />
-          <img src="assets/img/music/next-track.png" alt="" />
-        </div>
-        <div className="about_current_music">
-          <img src={musicElement[0].icon} alt="" />
-          <div>
-            <p id="current_music_title">{musicElement[0].executor}</p>
-            <p id="current_music_executor">{musicElement[0].title}</p>
-          </div>
-        </div>
-    </div>
-    <div id="curentTime">
-          {musicElement[0].full_time}
-    </div>
-
-*/

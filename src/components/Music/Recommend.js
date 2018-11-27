@@ -5,10 +5,16 @@ import NewMusicList from './NewMusicList'
 import hoverElement from '../../decorators/hoverElement'
 
 class Recommend extends React.Component {
+    constructor(props){
+      super(props)
+
+      this.state = {
+        showAllMusicList: false
+      }
+    }
+
     render(){
-
       const {hover, hoverOn, hoverOff} = this.props
-
       const show_all_style = {}
 
       return	<div className = "recommend_root">
@@ -35,18 +41,24 @@ class Recommend extends React.Component {
                         onMouseEnter={hoverOn}
                         onMouseLeave={hoverOff}
                         id="show_all">
-            						<p>Показати всі</p>
+            						<p onClick={this.showAllMusicList} >Показати всі</p>
             						<img src="/assets/img/music/recommend/show_all(right).png" style={hover ? this.decorateShowAll(show_all_style) : show_all_style} alt="" />
             					</div>
             				</div>
             				<div id="novelty_list">
-                      <NewMusicList />
+                      <NewMusicList showAllMusicList={this.state.showAllMusicList}/>
 
                     </div>
                   </div>
                 </div>
 
           }
+
+      showAllMusicList = () => {
+          this.setState({
+            showAllMusicList: !this.state.showAllMusicList
+          })
+      }
 
       decorateShowAll = (btnStyle) => {
 

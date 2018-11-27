@@ -8,12 +8,13 @@ class NewMusicList extends Component{
 
 	render(){
 
-
-		const musicElements = this.props.listElements.map(element => <li onClick={() => {const {setNewCarentMusic} = this.props; setNewCarentMusic(element)}} key={element.id}>
+		const listElements = this.getMusicList(this.props.showAllMusicList)
+		const musicElements = listElements.map(element => <li onClick={() => {const {setNewCarentMusic} = this.props; setNewCarentMusic(element)}} key={element.id}>
 			<MusicElement
 				element = {element}
 			/>
 		</li> )
+		
 
 		return(
 				<ul>
@@ -21,10 +22,19 @@ class NewMusicList extends Component{
 				</ul>
 			);
 		}
+
+
+	getMusicList = (allList) =>{
+		if (allList) {
+		 return this.props.allMusic
+		}else {
+			return this.props.novelty
+		}
 	}
 
-
+}
 
 export default connect(state => ({
-  listElements: state.noveltySongs
+  novelty: state.noveltySongs,
+	allMusic: state.allMusic
 }), {setNewCarentMusic})(NewMusicList)

@@ -15,8 +15,8 @@ function Root() {
         <Router>
           <Switch>
             <div>
-              <Route exact path='/' component={LoginOrSingIn} />
-              <Route path='/profil' component={App} />
+              <Route path='/' component={LoginOrSingIn} />
+              <Route path='/profil/' component={App} />
             </div>
           </Switch>
         </Router>

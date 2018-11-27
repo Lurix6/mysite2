@@ -7,6 +7,7 @@ import {deleteMusicElement, addNewMusic} from '../../AC'
 class MusicElement extends React.Component {
 
 			constructor (props) {
+
 				super(props)
 		        this.state = {
 		            myList : props.root_width === undefined,
@@ -14,6 +15,7 @@ class MusicElement extends React.Component {
 								update : false
 		          };
 
+				console.log(this.state.added);
 
 						}
 	    render(){
@@ -24,7 +26,7 @@ class MusicElement extends React.Component {
 				const setRootSize = {
 						width: root_width
 					};
-
+				console.log(this.props);
 
 	        return (
 	        	<div
@@ -87,6 +89,7 @@ class MusicElement extends React.Component {
 				addNewMusic(element)
 
 				this.setState({
+					added: true,
 					update: !this.state.update
 				})
 			}
