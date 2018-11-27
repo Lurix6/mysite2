@@ -55,10 +55,10 @@ export function loginMainProfile(mainProfil){
   }
 }
 
-export function changeSiteStyle(style){
+export function changeSiteStyle(background){
   return{
     type:CHANGE_SITE_STYLE,
-    payload:{style}
+    payload:{background}
   }
 }
 

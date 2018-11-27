@@ -14,7 +14,7 @@ class General extends React.Component {
       sex: props.loginProfil.personalDate.sex,
       birthday: props.loginProfil.personalDate.birthday,
       city: props.loginProfil.personalDate.city,
-
+      activeSiteBtn: {background: 'url(https://site-made-in.odessa.ua/website-image/QIEmajk4RGw/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D1%84%D0%BE%D0%BD-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B0%D0%B9%D1%82%D0%B0-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD.jpg)  no-repeat'},
       btnActive: true
 
     }
@@ -65,6 +65,12 @@ class General extends React.Component {
     )
   }
 
+  componentWillUpdate(nextProps, nextState){
+    localStorage.setItem(this.props.loginProfil.id, nextState.activeSiteBtn);
+
+  }
+
+
   saveChange = () => {
       this.props.changePrivateDataMainProfile({firstName : this.state.requred.firstName, lastName: this.state.requred.lastName, birthday: this.state.birthday, city: this.state.city, sex: this.state.sex})
   }
@@ -83,8 +89,6 @@ class General extends React.Component {
       requred: newRequred
     })
     this.btnIsActive(ev)
-
-    console.log(this.state);
   }
 
   changeLastName = (ev) => {
@@ -122,19 +126,34 @@ class General extends React.Component {
   }
 
   styleBtn1 = () => {
-      this.props.changeSiteStyle({background: 'url(https://site-made-in.odessa.ua/website-image/QIEmajk4RGw/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D1%84%D0%BE%D0%BD-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B0%D0%B9%D1%82%D0%B0-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD.jpg)',id: this.props.loginProfil.id })
+      this.props.changeSiteStyle('url(https://site-made-in.odessa.ua/website-image/QIEmajk4RGw/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D1%84%D0%BE%D0%BD-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B0%D0%B9%D1%82%D0%B0-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD.jpg)')
+      this.setState({
+        activeSiteBtn: 'url(https://site-made-in.odessa.ua/website-image/QIEmajk4RGw/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D1%84%D0%BE%D0%BD-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B0%D0%B9%D1%82%D0%B0-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD.jpg)'
+      })
   }
   styleBtn2 = () => {
-      this.props.changeSiteStyle({background: 'url(https://i.ytimg.com/vi/w9T97fRu3qc/maxresdefault.jpg)',id: this.props.loginProfil.id })
+      this.props.changeSiteStyle('url(https://i.ytimg.com/vi/w9T97fRu3qc/maxresdefault.jpg)')
+      this.setState({
+        activeSiteBtn: 'url(https://i.ytimg.com/vi/w9T97fRu3qc/maxresdefault.jpg)'
+      })
   }
   styleBtn3 = () => {
-      this.props.changeSiteStyle({background: 'url(https://i.ytimg.com/vi/s2EthFBFXCE/maxresdefault.jpg)',id: this.props.loginProfil.id })
+      this.props.changeSiteStyle('url(https://i.ytimg.com/vi/s2EthFBFXCE/maxresdefault.jpg)')
+      this.setState({
+        activeSiteBtn: 'url(https://i.ytimg.com/vi/s2EthFBFXCE/maxresdefault.jpg)'
+      })
   }
   styleBtn4 = () => {
-      this.props.changeSiteStyle({background: 'url(https://i.ytimg.com/vi/BwBhaQoiV94/maxresdefault.jpg)',id: this.props.loginProfil.id })
+      this.props.changeSiteStyle('url(https://i.ytimg.com/vi/BwBhaQoiV94/maxresdefault.jpg)')
+      this.setState({
+        activeSiteBtn: 'url(https://i.ytimg.com/vi/BwBhaQoiV94/maxresdefault.jpg)'
+      })
   }
   styleBtn5 = () => {
-      this.props.changeSiteStyle({background: 'url(https://www.xmple.com/wallpaper/black-linear-gradient-grey-1920x1080-c2-c0c0c0-000000-a-15-f-14.svg)',id: this.props.loginProfil.id })
+      this.props.changeSiteStyle('url(https://www.xmple.com/wallpaper/black-linear-gradient-grey-1920x1080-c2-c0c0c0-000000-a-15-f-14.svg)')
+      this.setState({
+        activeSiteBtn: 'url(https://www.xmple.com/wallpaper/black-linear-gradient-grey-1920x1080-c2-c0c0c0-000000-a-15-f-14.svg)'
+      })
   }
 
 
