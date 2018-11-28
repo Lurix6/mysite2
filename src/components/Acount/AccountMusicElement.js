@@ -5,9 +5,7 @@ class AccountMusicElement extends React.Component{
 
   render(){
     const element = this.getObjectMusicElementById(this.props.element)
-    console.log(element, 'element');
     return(<div>
-                <div id="play_music"></div>
                 <div id="author_music">
                   {element.executor} -
                 </div>

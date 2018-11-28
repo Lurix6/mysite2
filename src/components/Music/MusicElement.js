@@ -49,6 +49,20 @@ class MusicElement extends React.Component {
 	        );
 	    }
 
+			componentWillMount(){
+				const a = this.props.my_music_list.filter(element => element.id === this.props.element.id)
+				if (a.length > 0) {
+					this.setState({
+						added: true
+					})
+				}else {
+					this.setState({
+						added: false
+					})
+				}
+
+			}
+
 	    decorateMainImg = (btnStyle) => {
 
 	    	btnStyle.opacity = 0.25

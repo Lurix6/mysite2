@@ -7,7 +7,7 @@ import Friends from './Friends'
 import Settings from './Settings'
 import {Route, Switch} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {changeSiteStyle} from '../AC'
+import {changeSiteStyle, loginMainProfile} from '../AC'
 
 
 class App extends Component {
@@ -35,12 +35,17 @@ class App extends Component {
   }
 
   componentWillMount(){
+    if (localStorage.getItem("loginedUser")) {
+        this.props.loginMainProfile(JSON.parse(localStorage.getItem("loginedUser")));
+    }
     if (localStorage.getItem(this.props.loginProfil.id)) {
         this.props.changeSiteStyle(localStorage.getItem(this.props.loginProfil.id))
+
     }
+
   }
 }
 
 export default connect(state => ({
     loginProfil: state.loginProfil
-}), {changeSiteStyle})(App);
+}), {changeSiteStyle, loginMainProfile})(App);

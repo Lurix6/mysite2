@@ -102,7 +102,6 @@ class App extends Component {
 
   getAccountById = (location) => {
       if (location.pathname === '/profil/my') {
-          console.log('main profile ',this.props.mainProfile, location.pathname === '/profil/my');
           return this.props.mainProfile
       }
       const id = location.pathname.replace('/profil/id/', '')
@@ -114,9 +113,9 @@ class App extends Component {
 
   showMusicList = (account) => {
     if (this.state.moreMusic) {
-      return account.musicList.map(element => <AccountMusicElement element={element} key={element} />)
+      return account.musicList.map(element => <li className="userMusicLi" key={element}><AccountMusicElement element={element} key={element} /></li>)
     }else {
-      return this.getFirstThreeElement(account.musicList).map(element => <AccountMusicElement element={element} key={element} />)
+      return this.getFirstThreeElement(account.musicList).map(element => <li className="userMusicLi" key={element}><AccountMusicElement element={element} /> </li>)
     }
 
   }

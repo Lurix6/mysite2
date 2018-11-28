@@ -34,12 +34,15 @@ import {connect} from 'react-redux'
 
         <div className="header_section_two">
             <div className="header_item headerButton"><Link to='/profil/settings?category=general'><img src="https://www.freeiconspng.com/uploads/settings-icon-16.png" alt=""/></Link></div>
-          <div className="header_item headerButton"><Link to='/'><img src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png" alt=""/></Link></div>
+          <div className="header_item headerButton"><Link to='/'><img onClick={this.clearLoginedProfileInLocalStorage} src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png" alt=""/></Link></div>
         </div>
       </div>
 
     )
 
+  }
+  clearLoginedProfileInLocalStorage = () =>{
+    localStorage.removeItem('loginedUser');
   }
 
 }

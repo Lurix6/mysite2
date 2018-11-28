@@ -88,6 +88,7 @@ class LoginMainBody extends React.Component {
 				id: '/profil/id/'+account[0].id
 			})
 			this.props.loginMainProfile(account[0]);
+			localStorage.setItem('loginedUser', JSON.stringify(account[0]));
 		}
 	}
 
