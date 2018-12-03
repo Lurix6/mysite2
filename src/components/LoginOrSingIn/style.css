@@ -38,7 +38,7 @@
 #loginMainBody{
   background: #ECEDEF;
   display: flex;
-  height: 600px;
+  height: 720px;
   width: 100%;
 }
 
@@ -104,25 +104,16 @@
   background: white;
   border-radius: 3px;
   width: 320px;
-  height: 320px;
+  height: 510px;
+}
+#radioGroup {
+  margin-top: 10px;
 }
 
-#birthDay{
-  display: flex;
-  margin-left: 25px;
+#sexAndBirthday{
+  margin: 10px 0 0 30px;
+
 }
-
-#birthDay input{
-  width: 60px;
-  padding: 5px 10px;
-  height: 25px;
-  border-radius: 3px;
-  margin: 15px 0 0 5px;
-  background: #fff;
-  border: 1px solid #d3d9de;
-}
-
-
 
 #signUp p:nth-child(1){
   margin: 5px auto;
@@ -147,3 +138,29 @@
   border: 0;
   font-size: 15px;
 }
+
+
+
+#errorMassege {
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  right: 320px;
+  bottom: 380px;
+  background: red;
+  color: #fff;
+ }
+ #errorMassege::after, #errorMassege::before {
+  content: '';
+  position: absolute;
+  background: red;
+  right: -3px; bottom: 14px;
+  width: 20px; height: 20px;
+  z-index: 3; /* Прячем за основным блоком */
+  transform: rotate(45deg); /* Поворачиваем на 45º */
+  -webkit-transform: rotate(45deg);
+ }
+ #errorMassege::before {
+  z-index: 1; /* Накладываем поверх, чтобы скрыть следы тени */
+  box-shadow: none; /* Прячем тень */
+ }

@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 import { browserHistory } from 'react-router-dom';
 import { push } from 'react-router-redux';
 import PropTypes from "prop-types";
+import DatePickers from './DatePickers'
+import RadioButtons from './RadioButtons'
 
 class LoginMainBody extends React.Component {
 
@@ -20,7 +22,17 @@ class LoginMainBody extends React.Component {
 					email: null,
 					password:null
 				},
-				id: null
+				signUp: {
+					firstName: '',
+					lastName: '',
+					birthDay: '1998-05-24',
+					sex: 'female'
+				},
+				id: null,
+				errorMassege: 'Some text',
+				styleBottom: null,
+				finish: false
+
 		}
 	}
 
@@ -34,23 +46,83 @@ class LoginMainBody extends React.Component {
         	<div id='logIn'>
 						<input id='phoneAndEmail' type='text' style={this.state.loginDate.email ? null : inputStyleRed} placeholder='Phone or email' onChange={this.changeEmail}/>
 						<input id='password' type='text' style={this.state.loginDate.password ? null : inputStyleRed} placeholder='Password' onChange={this.changePassword} />
-						<div><Link to={this.state.id ? this.state.id : '/'}><button onClick={this.login}>Log In</button></Link><p>Forgot your password?</p></div>
+						<div><Link to={this.state.id ? this.state.id : ''}><button onClick={this.login}>Log In</button></Link><p>Forgot your password?</p></div>
 						<div></div>
 					</div>
-          <div id='signUp'>
+          <div id='signUp'  >
 							<p>Sign up</p>
-							<input id='firstName' type='text' placeholder='Your first name'/>
-							<input id='lastName' type='text' placeholder='Your last name'/>
-							<p id='dateTxt'>Date of birth</p>
-							<div id='birthDay'><input type='text' placeholder='Day'/><input type='text' placeholder='Mounth'/><input type='text' placeholder='Year'/></div>
-							<button>Continue registration</button>
+							<input id='firstName' type='text' placeholder='Your first name' onChange={(ev) => {this.setState({signUp: {...this.state.signUp,firstName: ev.target.value }})}} />
+							<input id='lastName' type='text' placeholder='Your last name' onChange={(ev) => {this.setState({signUp: {...this.state.signUp,lastName: ev.target.value }})}} />
+							<div id='sexAndBirthday' ><DatePickers handlerBirthday={this.handlerBirthday} />
+						  <div id='radioGroup'><RadioButtons handlerSex={this.handlerSex} /></div>
+							</div>
+							<Link to={this.state.finish ?'/?act=finish':''}><button onClick={this.registration}>Continue registration</button></Link>
+							<div id='errorMassege' style={this.state.styleBottom} hidden={this.state.styleBottom ? false : true} >{this.state.errorMassege}</div>
 					</div>
         </div>
 		</div>
+	}
 
 
+
+	registration = () => {
+
+			const	oneThousandNineHundredAndSixtyFive = -157766400000
+			const twoThousandSeven = 1167609600000
+
+			if (this.state.signUp.firstName.length > 1 ) {
+
+					if (this.state.signUp.lastName.length > 1 ) {
+							let date = Date.parse(this.state.signUp.birthDay)
+							if (date > oneThousandNineHundredAndSixtyFive && date < twoThousandSeven) {
+								this.setState({
+									styleBottom: null,
+									finish: true
+								})
+
+
+							}else {
+								this.setState({
+									errorMassege: 'Рік народрення повинен бути з 1965 до 2007',
+									styleBottom: {bottom: '260px'},
+									finish:false
+								})
+							}
+
+					}else {
+						this.setState({
+							errorMassege: 'Прізвище не відрлвідає вимогам',
+							styleBottom: {bottom: '303px'},
+							finish:false
+						})
+					}
+
+				}else {
+						this.setState({
+							errorMassege: 'Імя не відрлвідає вимогам',
+							styleBottom: {bottom: '355px'},
+							finish:false
+						})
+					}
 
 	}
+
+	handlerBirthday = (ev) => {
+			this.setState({
+				signUp: {...this.state.signUp, birthDay: ev}
+			})
+	}
+
+	handlerSex = (ev) => {
+			this.setState({
+				signUp: {...this.state.signUp, sex: ev}
+
+			})
+	}
+
+	/*
+<input type='text' placeholder='Day'/><input type='text' placeholder='Mounth'/><input type='text' placeholder='Year'/>
+	*/
 
 	changeEmail = (ev) =>{
 		const email = ev.target.value
@@ -108,6 +180,12 @@ class LoginMainBody extends React.Component {
 							loginDate: {...this.state.loginDate, buttonActive: true}
 					})
 			}
+		}
+
+		closeClue = () => {
+			this.setState({
+				styleBottom: null,
+			})
 		}
 
 
