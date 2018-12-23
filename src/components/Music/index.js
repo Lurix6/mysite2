@@ -26,6 +26,10 @@ class Music extends React.Component{
               <hr />
               <div className="showlist">
                 <Search />
+                <div className="about_list">
+                      <p>Аудіозаписи</p>
+                      <p>за замовчуванням</p>
+                </div>
                   {this.openCategory()}
               </div>
             </div>
@@ -36,7 +40,7 @@ class Music extends React.Component{
     openCategory = () => {
           switch (this.state.category) {
             case 'playList': return <div><PlayList /></div>
-            case 'recommend': return <div><Recommend /></div>
+            case 'recommend': return <div><Recommend selected={this.state.category} /></div>
             case 'myList': return <div><MusicList /></div>
 
           }

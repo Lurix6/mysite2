@@ -39,11 +39,11 @@ class Friends extends Component {
           </div>
           <hr />
           <div id='searchFriendName'>
-            <img src='https://www.freeiconspng.com/uploads/search-icon-png-18.png' />
+            <img alt="" src='https://www.freeiconspng.com/uploads/search-icon-png-18.png' />
             <input id='searchInputName' type='text' autoComplete="off" autoCorrect="off" value={this.state.findByName} autoCapitalize="off" spellCheck="false" placeholder="Почніть вводити ім'я друга" onChange={this.handlefriendFilterName} />
-            <div id='friendsFiltersTwo'><div onClick={this.openParametrs}>Параметри</div><img id='parametersFilters' src='https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-128.png' /></div>
           </div>
           <hr />
+          <div id='friendsFiltersTwo'><div onClick={this.openParametrs}>Параметри</div><img alt="" id='parametersFilters' src='https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-128.png' /></div>
           {this.state.moreFilters ? this.moreFilters() : null}
           <div className='friedsList'>
             <ul>

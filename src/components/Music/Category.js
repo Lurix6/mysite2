@@ -1,7 +1,5 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import {change_curent_music_category} from '../../AC'
-import {connect} from 'react-redux'
 import './../style/Category.css'
 
 class Category extends React.Component{

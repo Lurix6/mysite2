@@ -14,7 +14,7 @@ class FriendElement extends React.Component {
               <div className='friendElement'>
                   <div>
 									<Link to={"/profil/id/"+element.id}>
-                    <img className='friendAvatar' src={element.img} onClick={this.handleChangeFriend} />
+                    <img className='friendAvatar' src={element.img} alt="avatar" onClick={this.handleChangeFriend} />
 										</Link>
                     <div className='friendPeronalData'>
                       <div className='friendName' onClick={this.handleChangeFriend} >
@@ -30,7 +30,7 @@ class FriendElement extends React.Component {
                     </div>
                   </div>
                   <div className='more'>
-                    <img src='https://repl.it/public/images/loading_dots.gif' />
+                    <img src='https://repl.it/public/images/loading_dots.gif' alt="loading dots" />
                   </div>
                 </div>
           )

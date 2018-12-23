@@ -2,33 +2,25 @@ import React from 'react'
 import '../style/header.css'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+import { logoutMainProfile } from '../../AC'
 
  class Header extends React.Component {
 
   render(){
 
     const style = this.props.loginProfil.siteStyle
-    console.log('header', style);
 
       return (
       <div className="header" style={style}>
         <div className="header_section">
           <div className="logo">
-            <a href="">LOGO</a>
+            LOGO
           </div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/globe-7-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/search-13-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/group-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/joystick-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/star-5-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/start-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/headphones-3-xxl.png" alt=""/>
-        </div>
 
         </div>
 
         <div className="header_section_half">
-          <div><a href="">Update Your rating</a>
+          <div>Update Your rating
           </div>
         </div>
 
@@ -43,10 +35,24 @@ import {connect} from 'react-redux'
   }
   clearLoginedProfileInLocalStorage = () =>{
     localStorage.removeItem('loginedUser');
+    this.props.logoutMainProfile()
   }
 
 }
 
 export default connect(state => ({
   loginProfil : state.loginProfil
-}))(Header)
+}),{logoutMainProfile})(Header)
+
+
+
+/*
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/globe-7-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/search-13-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/group-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/joystick-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/star-5-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/start-xxl.png" alt=""/></div>
+          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/headphones-3-xxl.png" alt=""/>
+        </div>
+*/

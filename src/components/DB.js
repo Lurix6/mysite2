@@ -1,7 +1,7 @@
 export const Profils = [
 {
 	id:'0000',
-	email:'vasya_popovych23@gmai.com',
+	email:'vasyapopovich23@gmai.com',
 	password:'123456789',
 	status: 'На судьбу , дураков и женщин не обижаются =)',
 	firstName:'Vasya',
@@ -187,7 +187,31 @@ export const selectedFriend = {
 	musicList: ['56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782fghgfc2c3268ddb3206','kwu3kzt2db']
 }
 
+export const communities = [
+	{
+		"url":"eurofoot",
+		"title":"Европейский Футбол | Ман Юнайтед - Арсенал",
+		"img":"https://pp.userapi.com/c840224/v840224794/66df4/V3HF7hP66r8.jpg?ava=1",
+		"subscribers":["0005", "0003", "0001"],
+		"subject":"Футбол"
+	},
+	{
+		"url":"italyfootball",
+		"title":"Европейский Футбол | Ман Юнайтед - Арсенал",
+		"img":"https://pp.userapi.com/c847220/v847220632/b9712/IAB1Cf5SUYM.jpg?ava=1",
+		"subscribers":["0006", "0004", "0002"],
+		"subject":"Футбол"
+	},
+	{
+		"url":"worldfbl",
+		"title":"Трансферы",
+		"img":"https://pp.userapi.com/c623231/v623231622/3c809/QUqwUQmZwgk.jpg?ava=1",
+		"subscribers":["0004", "0002", "0001"],
+		"subject":"Футбол"
+	}
 
+
+]
 
 export const musics = [
 	{
@@ -309,6 +333,9 @@ export const noveltySongs = [
 		"full_time": "4:02"
 	}
 ]
+
+
+
 
 
 

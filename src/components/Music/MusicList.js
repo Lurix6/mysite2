@@ -11,18 +11,12 @@ class MusicList extends Component{
 		const musicElements = this.props.listElements.map(element => <li onClick={() => {const {setNewCarentMusic} = this.props; setNewCarentMusic(element)}} key={element.id}>
 			<MusicElement
 				element = {element}
-				root_width = '550px'
 			/>
 		</li> )
 
 		return(
 
-
 			<div id="list_music">
-			<div className="about_list">
-						<p>Аудіозаписи</p>
-						<p>за замовчуванням</p>
-			</div>
 				<ul>
 					{musicElements}
 				</ul>

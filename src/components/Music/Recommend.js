@@ -46,7 +46,7 @@ class Recommend extends React.Component {
             					</div>
             				</div>
             				<div id="novelty_list">
-                      <NewMusicList showAllMusicList={this.state.showAllMusicList}/>
+                      <NewMusicList showAllMusicList={this.state.showAllMusicList} selected={this.props.selected}/>
 
                     </div>
                   </div>

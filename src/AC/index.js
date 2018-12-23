@@ -2,7 +2,7 @@ import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS,
   ADD_NEW_MUSIC_IN_MY_LIST, CHANGE_SELECTED_FRIEND,
   CHANGE_FILTERS_FRIEND, LOGIN_MAIN_PROFILE,
   CHANGE_CURENT_MUSIC_CATEGORY, CHANGE_SITE_STYLE,
-  CHANGE_PRIVATE_DATA_MAIN_PROFILE, CLEAR_ALL_FILTER} from '../constants'
+  CHANGE_PRIVATE_DATA_MAIN_PROFILE, CLEAR_ALL_FILTER, LOGOUT_MAIN_PROFILE} from '../constants'
 
 
 export function deleteMusicElement(id){
@@ -54,6 +54,15 @@ export function loginMainProfile(mainProfil){
     payload:{mainProfil}
   }
 }
+
+
+export function logoutMainProfile(){
+  return{
+    type:LOGOUT_MAIN_PROFILE
+  }
+}
+
+
 
 export function changeSiteStyle(background){
   return{

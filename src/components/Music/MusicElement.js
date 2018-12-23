@@ -10,27 +10,26 @@ class MusicElement extends React.Component {
 
 				super(props)
 		        this.state = {
-		            myList : props.root_width === undefined,
+		            myList : props.isRecomended,
 								added : props.my_music_list.includes(props.element),
 								update : false
 		          };
 
-				console.log(this.state.added);
-
 						}
+
+
+
 	    render(){
-	    	const {element, hover, hoverOn, hoverOff, root_width} = this.props
+
+	    	const {element, hover, hoverOn, hoverOff} = this.props
 	    	const btnStyle = {
 	    			opacity:'1'
 	    		};
-				const setRootSize = {
-						width: root_width
-					};
 				console.log(this.props);
 
 	        return (
 	        	<div
-	    	    	className= "root" style={setRootSize}
+	    	    	className= "root"
 		            onMouseEnter={hoverOn}
 		            onMouseLeave={hoverOff}>
 		        	<div>
@@ -79,7 +78,6 @@ class MusicElement extends React.Component {
 	    }
 
 	    getImageBody = () => {
-				const {element} = this.props
 	    	return <div>
 	  			<img src="/assets/img/music/magic1.png" alt="" title="Показати схожі" />
 					{this.state.myList ? 	null : <img src="/assets/img/music/del1.png" title="Видалит" alt="" onClick={this.hendleDelete} /> }
@@ -98,7 +96,7 @@ class MusicElement extends React.Component {
 
 
 			hendleAddNewMusick = () => {
-				const {addNewMusic, element, my_music_list} = this.props
+				const {addNewMusic, element} = this.props
 
 				addNewMusic(element)
 

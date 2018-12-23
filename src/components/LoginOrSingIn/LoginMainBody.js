@@ -2,8 +2,6 @@ import React from 'react'
 import {withRouter,Link} from 'react-router-dom'
 import {loginMainProfile} from '../../AC'
 import {connect} from 'react-redux'
-import { browserHistory } from 'react-router-dom';
-import { push } from 'react-router-redux';
 import PropTypes from "prop-types";
 import DatePickers from './DatePickers'
 import RadioButtons from './RadioButtons'
@@ -37,7 +35,7 @@ class LoginMainBody extends React.Component {
 	}
 
 	render(){
-				const inputStyleRed = {borderColor: 'red'}
+		const inputStyleRed = {borderColor: 'red'}
 
 		return <div id='loginMainBody'>
         <div id='aboutAs'>
@@ -46,7 +44,7 @@ class LoginMainBody extends React.Component {
         	<div id='logIn'>
 						<input id='phoneAndEmail' type='text' style={this.state.loginDate.email ? null : inputStyleRed} placeholder='Phone or email' onChange={this.changeEmail}/>
 						<input id='password' type='text' style={this.state.loginDate.password ? null : inputStyleRed} placeholder='Password' onChange={this.changePassword} />
-						<div><Link to={this.state.id ? this.state.id : ''}><button onClick={this.login}>Log In</button></Link><p>Forgot your password?</p></div>
+						<div><button onClick={this.login}>Log In</button><p>Forgot your password?</p></div>
 						<div></div>
 					</div>
           <div id='signUp'  >
@@ -156,11 +154,10 @@ class LoginMainBody extends React.Component {
 	login = () => {
 		const account = this.props.allProfile.filter(element => element.password === this.state.loginDate.password && element.email === this.state.loginDate.email)
 		if (account.length > 0) {
-			this.setState({
-				id: '/profil/id/'+account[0].id
-			})
 			this.props.loginMainProfile(account[0]);
 			localStorage.setItem('loginedUser', JSON.stringify(account[0]));
+			this.props.history.push('/profil/id/'+account[0].id)
+
 		}
 	}
 

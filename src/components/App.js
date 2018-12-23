@@ -5,15 +5,16 @@ import Header from './Header'
 import User from './Acount'
 import Friends from './Friends'
 import Settings from './Settings'
-import {Route, Switch} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {changeSiteStyle, loginMainProfile} from '../AC'
-
+import Communities from './Communities'
 
 class App extends Component {
 
 
   render() {
+    console.log(this.props);
 
     return (
       <div className="block_header">
@@ -26,6 +27,8 @@ class App extends Component {
                 <Route path='/profil/settings' component={Settings}/>
                 <Route path='/profil/music' component={Music}/>
                 <Route path='/profil/friends' component={Friends} />
+                <Route path='/profil/communities' component={Communities} />
+
         </div>
       </div>
     </div>

@@ -36,9 +36,9 @@ class App extends Component {
             <div className="wall">
               <div className="about_me">
                 <div className="name_and_status">
-                  <p className="name">{selectedAccount.firstName} {selectedAccount.lastName}</p>
+                  <h2 className="name">{selectedAccount.firstName} {selectedAccount.lastName}</h2>
                   <p >{selectedAccount.status}</p>
-                  <p className="status">{selectedAccount.online ? 'Active' : 'Ofline'}</p>
+                  <h3 className="status">{selectedAccount.online ? 'Active' : 'Ofline'}</h3>
                 </div>
                 <div className="private_inf">
                   <div className="my_date">
@@ -81,7 +81,7 @@ class App extends Component {
                       <p><span>{selectedAccount.musicList.length} </span>Аудіозаписи</p>
                     </div>
                     <div>
-                      <p>Усі</p>
+                      <p>{!this.state.moreMusic ? "Усі" : "Приховати"}</p>
                     </div>
                   </div>
                 <div className="list_music">

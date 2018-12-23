@@ -18,7 +18,7 @@ class AccountMusicElement extends React.Component{
     }
 
     getObjectMusicElementById = (selected) => {
-      return this.props.allMusic.filter(element => element.id == selected)[0]
+      return this.props.allMusic.filter(element => element.id === selected)[0]
 
     }
 

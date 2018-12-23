@@ -1,4 +1,3 @@
-import {musics} from '../../components/DB'
 import {CHANGE_CARENT_MUSIC, CHANGE_CURENT_MUSIC_CATEGORY} from '../../constants'
 
 const defaultProps = {

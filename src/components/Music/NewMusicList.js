@@ -12,9 +12,10 @@ class NewMusicList extends Component{
 		const musicElements = listElements.map(element => <li onClick={() => {const {setNewCarentMusic} = this.props; setNewCarentMusic(element)}} key={element.id}>
 			<MusicElement
 				element = {element}
+				isRecomended= {this.isRecomended}
 			/>
 		</li> )
-		
+
 
 		return(
 				<ul>
@@ -30,6 +31,10 @@ class NewMusicList extends Component{
 		}else {
 			return this.props.novelty
 		}
+	}
+
+	isRecomended = () => {
+		return this.props.selected ? true : false;
 	}
 
 }
